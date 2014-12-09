@@ -21,6 +21,7 @@ namespace :db do
         hash[:brewery] = info.beer.brewery.brewery_name
         Beer.create(hash)
       end
+    end
   end
 
 end
