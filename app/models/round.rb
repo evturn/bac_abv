@@ -8,14 +8,17 @@ class Round < ActiveRecord::Base
     # A 1.5 fl_oz glass of .40 ABV spirit
 
     # *** Example ***
-    # 1.8 fl_oz (3 beers)
+    # 3 glasses (3 * 12)
+    # 1.8 alc_oz (36 * 0.05)
     # 155 lbs
     # 0.73 (male)
-    # 1 hour
+    # 1 hours
 
-    fl_oz = num_beer * 0.6
 
-    step_1 = (fl_oz * 5.14) # 9.25
+    bev_oz = glasses * 12
+    alc_oz = bev_oz * abv
+
+    step_1 = (alc_oz * 5.14) # 9.25
     step_2 = (lbs * sex)  # 113.5
     step_3 = (step_1 / step_2) # 0.08
     step_4 = (0.015 * hours) # 0.015
