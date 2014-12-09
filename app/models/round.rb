@@ -1,11 +1,11 @@
 class Round < ActiveRecord::Base
 
-  def calculate(abv, lbs, sex, hours)
+  def calculate(glasses, abv, lbs, sex, hours)
 
-    # The following all contain 0.6 fl_oz of alcohol
-    # A 12 fl_oz glass of .05 ABV beer
-    # A 5 fl_oz glass of  .12 ABV wine
-    # A 1.5 fl_oz glass of .40 ABV spirit
+    # A 12 bev_oz glass of 0.05 abv beer
+    # A 5 bev_oz glass of  0.12 abv wine
+    # A 1.5 bev_oz glass of 0.40 abv spirit
+    # All all contain 0.6 alc_oz
 
     # *** Example ***
     # 3 glasses (3 * 12)
@@ -13,7 +13,6 @@ class Round < ActiveRecord::Base
     # 155 lbs
     # 0.73 (male)
     # 1 hours
-
 
     bev_oz = glasses * 12
     alc_oz = bev_oz * abv
