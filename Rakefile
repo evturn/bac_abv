@@ -20,7 +20,7 @@ namespace :db do
         hash[:label]   = info.beer.beer_label
         hash[:brewery] = info.beer.brewery.brewery_name
         Beer.create(hash)
-
+      end
   end
 
 end
