@@ -10,8 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require gauge
+
+
+
 //= require jquery
 //= require jquery_ujs
+//= require fpsmeter
 //= require turbolinks
 //= require_tree .
