@@ -37,3 +37,9 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use untappd
+gem 'untappd'
+
+# Use pry
+gem 'pry'
