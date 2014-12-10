@@ -8,7 +8,7 @@ class BeersController < ApplicationController
   def show
 
     query = params['query'].gsub(' ', '+')
-    url = "http://api.untappd.com/v4/search/beer?client_id=ENV['UNTAPPD_ID']&client_secret=ENV['UNTAPPD_SECRET']&q=#{query}"
+    url = "https://api.untappd.com/v4/search/beer?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}&q=#{query}"
 
     response     = HTTParty.get( url )
     

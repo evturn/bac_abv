@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :beers
+  root to: "beers#index"
+  get '/beers/beer' => "beers#show"
 
 end
