@@ -1,18 +1,21 @@
-.chart-gauge {
-  width: 400px;
-  margin: 100px auto  ;
+body {
+	margin: 30px;
+}
+
+.navbar {
+	height: 100px;
 }
 
 .chart-color1 {
-  fill: #DEA82C;
+  fill: yellow;
 }
 
 .chart-color2 {
-  fill: #E9621A;
+  fill: darkorange;
 }
 
 .chart-color3 {
-  fill: #e92213;
+  fill: red;
  }
 .needle {
 	fill: #464A4F;
