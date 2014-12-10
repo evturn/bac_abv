@@ -1,4 +1,27 @@
+<div class="container">
+  
+  <div class="row">  
+    <div id="beer-search" class="sixteen columns" >
+      <%= render partial: "search" %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div id="chart-gauge" class="eight columns">
+      <%= render partial: "meter" %>
+    </div>
+    <div id="featured-beer" class="eight columns" >
+      <%= render partial: "featured" %>
+    </div>  
+  </div>
+ 
+  <div class="row">
+    <div id="calculator" class="eight columns">
+      <%= render partial: "calculator" %>
+    </div>
+    <div id="trending-beer" class="eight columns">
+      <%= render partial: "trending" %>
+    </div>
+  </div>
 
-
-<%= render partial: "search" %>
-<%= render partial: "trending" %>
+</div>
