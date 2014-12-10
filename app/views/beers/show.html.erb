@@ -1,12 +1,13 @@
-<div class="beer-holder">
-	<div class="choosen-beer">
+<div class="container">
+	<div class="beer-label">
 		<img src="<%= @label %>">
-			<%= @name.upcase %> is <%= @abv %>% Alcohol By Volume
-		</div>
-	<h2>Here's the shit they talk:</h2>
-	<h3><%= @description %></h3>
-
-	<form method="get" action="/">
-		<input type="submit" value="Back">
-	</form>
+	</div>
+	<div class="beer-info">	
+		<ul>
+			<li>BEER: <%= @name.upcase %><li>
+			<li>ABV: <%= @abv %>%</li>
+			<li>BLURB: <%= @description %></li>
+		</ul>
+	</div>
+		<a class="button" href="/">BACK</a>
 </div>
