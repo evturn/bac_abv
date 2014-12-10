@@ -1,76 +1,59 @@
 <form method="post" enctype="text">
-	<table>
-		<tbody>
-			<tr>
-				<h2>CALCULATOR</h2>
-			<td>
-				<input type="radio" value="choice" name="gender">
-				MALE
-			</td>
-			<td>
-				<input type="radio" value="choice" name="gender">
-				FEMALE
-			</td>		
-				</tr>
-		</tbody>
-	</table>
-<table>
-		<tbody>
-			<tr>
-				Weight
-			<td>
-				<input name="lbs">
-				Lbs
-			</td>	
-				</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<tr>
-				Hours Since First Drink
-			<td>
-				<input name="hours">
-				Hours
-			</td>	
-				</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<tr>
-				Percent of Alcohol
-			<td>
-				<input name="abv">
-				Alcohol %
-			</td>	
-				</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<tr>
-				Total Fliud Ounces
-			<td>
-				<input name="fl_oz">
-				Fluid Ounces
-			</td>	
-				</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<td>
-				<input name="calc-btn" type="button" value="Cheers">
-			</td>
-			<td>
-				<input type="reset" value="Reset">
-			</td>
-			<tr>
-				<td>
-					<input name="results">
-				</td>
-			</tr>	
-		</tbody>
-	</table>
+	<h2>CALCULATOR</h2>
+		<div class="row">
+			<div class="two columns">
+				<input type="radio" name="sex">
+				<span class="label-body">MALE</span>
+			</div>
+			
+			<div class="two columns">
+				<input class="u-full-width" type="radio" value="choice" name="sex">
+				<span class="label-body">FEMALE</span>
+			</div>
+		</div>	
+
+		<div class="row">
+			<div class="five columns">	
+			<label for="lbs">WEIGHT</label>	
+				<input class="u-full-width" type="password" placeholder="Body Weight (lbs)" name="lbs">
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="five columns">
+				<label for="hours">HOURS</label>
+				<input class="u-full-width" type="text" placeholder="Hours Since 1st Drink" name="hours">
+			</div>
+		</div>	
+
+		<div class="row">
+			<div class="five columns">
+				<label for="bev_oz">BEERS</label>
+				<input class="u-full-width" type="text" placeholder="Beers Consumed" name="bev_oz">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="five columns">
+				<label for="ABV">ALCOHOL %</label>
+				<input class="u-full-width" type="text" placeholder="Percent of Alcohol" name="abv">
+			</div>
+		</div>	
+			
+		<div class="row">
+			<div class="two columns">
+				 <input class="u-full-width" type="submit" value="SUBMIT">
+			</div>
+			<div class="two columns">
+				<input class="u-full-width" type="reset" value="RESET">
+			</div>
+		</div>	
+		
+		<div class="row">
+			<div class="five columns">
+				<label for="ABV">RESULT</label>
+				<input class="u-full-width" type="text" placeholder="Blood Alcohol Level" name="bac">
+			</div>
+		</div>		
+
 </form>

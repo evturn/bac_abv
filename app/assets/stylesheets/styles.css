@@ -2,8 +2,12 @@ body {
 	margin: 30px;
 }
 
+#calculator form {
+	margin-bottom: -20px;
+}
+
 .navbar {
-	height: 100px;
+	height: 70px;
 }
 
 .chart-color1 {
