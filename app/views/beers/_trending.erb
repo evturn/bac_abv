@@ -1,0 +1,17 @@
+<div class="row">
+	
+	<div id="chart-gauge" class="one-column">
+		<%= render partial: "meter" %>
+	</div>
+	<div id="featured-beer" class="eleven-columns">
+		<h2>FEATURED</h2>
+		<img src="<%= @f_label %>">
+		<ul>
+			<li>BEER: <%= @f_beer %></li>
+			<li>ABV: <%= @f_abv%></li>
+			<li>BREWERY: <%= @f_brewery %></li>
+			<li>FROM: <%= @f_location %></li>
+		</ul>
+	</div>
+	
+</div>
