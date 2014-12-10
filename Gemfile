@@ -43,3 +43,6 @@ gem 'untappd'
 
 # Use pry
 gem 'pry'
+
+# Use HTTParty
+gem 'httparty'
