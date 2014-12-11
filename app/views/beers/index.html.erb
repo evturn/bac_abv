@@ -22,10 +22,11 @@
 
     <script type="text/template" id="beer-results-template">
       <div class="six columns">
+        <img src="<%%= beer_label %>">
         <ul>
-          <li><%= beer_name %></li>
-          <li><%= beer_abv %></li>
-          <li><%= beer_desc %></li>
+          <li><%%= beer_name %></li>
+          <li><%%= beer_abv %></li>
+          <li><%%= beer_description %></li>
         </ul>
       </div>
    </script>
@@ -38,3 +39,25 @@
     </div>
 
 </div>
+
+<script>
+  
+$(function(){
+  $('#submit-beer').on('click', function(e){
+    e.preventDefault();
+    beerQuery = $('#search-bar').val();
+    $.ajax({
+      url: "/beers",
+      data: {
+        query: beerQuery
+      },
+      success: function(data) {
+        var beer = new Beer(data);
+        var beerView = new BeerView({ model: beer });
+        debugger;
+      }
+    });
+  });
+});
+
+</script>
