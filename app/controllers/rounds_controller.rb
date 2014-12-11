@@ -4,7 +4,6 @@ class RoundsController < ApplicationController
     @rounds = Round.all
     respond_to do format
       format.json { render json: @rounds }
-    
     end
   end
 
