@@ -1,11 +1,11 @@
 class Round < ActiveRecord::Base
 
-  def calculate(sex, lbs, hours, drinks, abv)
-    sex    = params(:name[sex])
-    lbs    = params(:name[lbs])
-    hours  = params(:name[hours])
-    drinks = params(:name[drinks])
-    abv    = params(:name[abv])
+  def calculate()
+    sex    = self.sex
+    lbs    = self.lbs
+    hours  = self.hours
+    drinks = self.drinks
+    abv    = self.abv
 
     rate = sex == "male" ? 0.73 : 0.66
 
@@ -17,7 +17,7 @@ class Round < ActiveRecord::Base
     step_3 = (step_1 / step_2)
     step_4 = (0.015 * hours)
 
-    @bac   = (step_3 - step_4)
+    self.bac   = (step_3 - step_4)
 
   end
 

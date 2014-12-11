@@ -10,8 +10,6 @@ class RoundsController < ApplicationController
   def create
     round = Round.create(round_params)
     round.calculate
-    bac = @bac
-    round.update(params(:round[bac]))
     round.save
     render json: round
   end
