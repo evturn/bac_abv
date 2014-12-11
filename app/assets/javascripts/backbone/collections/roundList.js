@@ -1,4 +1,4 @@
-console.log('we got round roundList')
+console.log('we got roundList')
 
 var RoundList = Backbone.Collection.extend({
 	model: Round,

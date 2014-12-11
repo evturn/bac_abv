@@ -78,7 +78,7 @@ $(function(){
           console.log(data)
           var round = new Round(data);
           var roundView  = new RoundView({ model: round });
-          $('#bac-template').html(view.render().$el);
+          $('#bac-display').html(roundView.render().$el);
 
         }
       });
