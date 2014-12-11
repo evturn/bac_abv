@@ -5,28 +5,33 @@
     <div class="row">
       <div id="calculator" class="five columns">
         <%= render partial: "calculator" %>
-      </div>
-      <div id="beer-search" class="six columns offset-by-one">
-        <%= render partial: "search" %>
-        <div class="row">
-          <div id='found-beer' class="three columns">
-        &zwnj;
-      </div>
-        </div>
-      </div>
-      <div id="featured-beer" class="three columns">
-        <%= render partial: "featured" %>
-      </div>  
-    </div>
-   
     <div class="row">
       <div id="chart-gauge" class="five columns">
         <%= render partial: "meter" %>
       </div>
+    </div>
 
-      <div id="trending-beer" class="three columns offset-by-seven">
-        <%= render partial: "trending" %>
       </div>
+      <div id="beer-search" class="six columns offset-by-one">
+        <%= render partial: "search" %>
+        
+      <div class="row">
+        <div id='found-beer'>
+          &zwnj;
+        </div>
+      </div>
+
+      </div>
+      <div id="featured-beer" class="three columns">
+        <%= render partial: "featured" %>
+
+      <div class="row">
+        <div id="trending-beer" class="three columns">
+        <%= render partial: "trending" %>
+        </div>
+    </div>  
+
+      </div>  
     </div>
 
 </div>
@@ -49,6 +54,7 @@ $(function(){
         var beer = new Beer(data);
         var view = new BeerView({model: beer});
         $('#found-beer').html(view.render().$el);
+        $('#found-beer').addClass('found-beer cf');          
 
       }
     });
