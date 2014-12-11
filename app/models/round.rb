@@ -1,6 +1,24 @@
 class Round < ActiveRecord::Base
 
-  def calculate(glasses, abv, lbs, sex, hours)
+  def calculate(sex, lbs, hours, drinks, abv)
+
+    sex    = params(:name[sex])
+    lbs    = params(:name[lbs])
+    hours  = params(:name[hours])
+    drinks = params(:name[drinks])
+    abv    = params(:name[abv])
+
+
+    rate = sex == "male" ? 0.73 : 0.66
+
+    bev_oz = drinks * 12
+    alc_oz = bev_oz * abv
+
+    step_1 = (alc_oz * 5.14) # 9.25
+    step_2 = (lbs * rate)  # 113.5
+    step_3 = (step_1 / step_2) # 0.08
+    step_4 = (0.015 * hours) # 0.015
+    bac    = (step_3 - step_4) # 0.06
 
     # A 12 bev_oz glass of 0.05 abv beer
     # A 5 bev_oz glass of  0.12 abv wine
@@ -13,25 +31,6 @@ class Round < ActiveRecord::Base
     # 155 lbs
     # 0.73 (male)
     # 1 hours
-
-    bev_oz = glasses * 12
-    alc_oz = bev_oz * abv
-
-    step_1 = (alc_oz * 5.14) # 9.25
-    step_2 = (lbs * sex)  # 113.5
-    step_3 = (step_1 / step_2) # 0.08
-    step_4 = (0.015 * hours) # 0.015
-    bac    = (step_3 - step_4) # 0.06
-
-
-
-
-    # r = sex == "male" ? 0.73 : 0.66
-    # bac = ((abv * 5.14) / (lbs * r)) - (0.015 * hours)
-
-
-
-
   end
 
 end
