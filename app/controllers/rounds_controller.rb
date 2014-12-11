@@ -1,7 +1,14 @@
 class RoundsController < ApplicationController
 
-   def calculator
+  def create
+    round = Round.create(round_params)
+    render json: turtle
+  end
 
-   end
+  private
+
+  def round_params
+    params.require(:round).permit(:drinks, :hours, :sex, :lbs, :abv)
+  end
 
 end
