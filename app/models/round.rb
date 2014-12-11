@@ -17,7 +17,7 @@ class Round < ActiveRecord::Base
     step_3 = (step_1 / step_2)
     step_4 = (0.015 * hours)
 
-    bac    = (step_3 - step_4)
+    @bac   = (step_3 - step_4)
 
   end
 
