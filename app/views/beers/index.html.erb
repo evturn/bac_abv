@@ -72,12 +72,14 @@ $(function(){
               hours: $(this).find("input[name='hours']").val(),
               abv: $(this).find("input[name='abv']").val(),
               drinks: $(this).find("input[name='drinks']").val()
-            }
+            },
           },
         success: function(data) {
           console.log(data)
           var round = new Round(data);
-          
+          var roundView  = new RoundView({ model: round });
+          $('#bac-template').html(view.render().$el);
+
         }
       });
   });
