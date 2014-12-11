@@ -1,5 +1,13 @@
 class RoundsController < ApplicationController
 
+  def index
+    @rounds = Round.all
+    respond_to do format
+      format.json { render json: @rounds }
+    
+    end
+  end
+
   def create
     round = Round.create(round_params)
     render json: round
