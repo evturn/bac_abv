@@ -1,0 +1,1 @@
+var BeerList = Backbone.Collection.extend{()};

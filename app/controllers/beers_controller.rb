@@ -1,5 +1,5 @@
 class BeersController < ApplicationController
-
+  
   def index
 
     trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}"
@@ -21,7 +21,7 @@ class BeersController < ApplicationController
 
   end
 
-  def show
+  def search
 
     query = params['query'].gsub(' ', '+')
     url = "https://api.untappd.com/v4/search/beer?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}&q=#{query}"
