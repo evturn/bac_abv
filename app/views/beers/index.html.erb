@@ -18,9 +18,20 @@
       <div id="chart-gauge" class="five columns">
         <%= render partial: "meter" %>
       </div>
-      <div id="beer-results" class="six columns">
-  
+ 
+
+    <script type="text/template" id="beer-results-template">
+      <div class="six columns">
+        <ul>
+          <li><%= beer_name %></li>
+          <li><%= beer_abv %></li>
+          <li><%= beer_desc %></li>
+        </ul>
       </div>
+   </script>
+
+
+
       <div id="trending-beer" class="three columns offset-by-seven">
         <%= render partial: "trending" %>
       </div>

@@ -17,6 +17,9 @@
 //= require jquery_ujs
 //= underscore
 //= backbone
+//= require_tree ./backbone/models/
+//= require_tree ./backbone/collections/
+//= require_tree ./backbone/views/
 //= require d3
 //= require turbolinks
 //= require_tree .
