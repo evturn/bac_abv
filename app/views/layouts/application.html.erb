@@ -3,7 +3,7 @@
 <head>
   <title>BAC ABV</title>
 
-	    <script type="text/template" id="beer-results-template">
+     <script type="text/template" id="beer-results-template">
       <div class="six columns">
         <img src="<%%= beer_label %>">
         <ul>
@@ -12,9 +12,14 @@
           <li><%%= beer_description %></li>
         </ul>
       </div>
+    </script>
+
+   <script type="text/template" id="bac-template">
+        <div class="five columns">
+          <h3>&#8776; BAC%</h3>
+          <h4>< %%= bac %></h4>
+      </div>
    </script>
-
-
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

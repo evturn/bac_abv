@@ -25,14 +25,14 @@
       <div id="featured-beer" class="three columns">
         <%= render partial: "featured" %>
 
-      <div class="row">
-        <div id="trending-beer" class="three columns">
-        <%= render partial: "trending" %>
-        </div>
-    </div>  
+        <div class="row">
+          <div id="trending-beer" class="three columns">
+          <%= render partial: "trending" %>
+          </div>
+       </div>  
 
       </div>  
-    </div>
+</div>
 
 </div>
 
@@ -77,6 +77,7 @@ $(function(){
         success: function(data) {
           console.log(data)
           var round = new Round(data);
+
         }
       });
   });
