@@ -1,6 +1,6 @@
 class RoundsController < ApplicationController
 
-   def index
+   def calculator
 
    end
 

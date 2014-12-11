@@ -60,6 +60,20 @@ $(function(){
     });
   });
 
+    
+  $('#calculator-form').on('submit', function(e){
+
+    calcStats = $('#calculator-form').val();
+      $.ajax({
+          url: "/beers",
+          data: {
+            query: calcStats
+          },
+      });
+  });
+
+
+
 });
 
 </script>
