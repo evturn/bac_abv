@@ -52,9 +52,9 @@ $(function(){
         query: beerQuery
       },
       success: function(data) {
-        var beer = new Beer(data);
-        var beerView = new BeerView({ model: beer });
-        debugger;
+        var beer = new Beer({ beer: {model: data} });
+        var beerView = new BeerView();
+        beerView(beer).render();
       }
     });
   });
