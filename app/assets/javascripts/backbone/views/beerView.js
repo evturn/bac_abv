@@ -1,3 +1,3 @@
-var BeerList = Backbone.View.extend({
-	
+var BeerView = Backbone.View.extend({
+
 });

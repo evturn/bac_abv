@@ -1,1 +1,4 @@
-var BeerList = Backbone.Collection.extend{()};
+var BeerList = Backbone.Collection.extend{(
+	model: Beer,
+	url: '/beers'
+)};
