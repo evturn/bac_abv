@@ -34,7 +34,10 @@ body {
 }
 
 .navbar {
-	height: 70px;
+	height: 60px;
+	width: 960px;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
 }
 
 #chart-gauge {
