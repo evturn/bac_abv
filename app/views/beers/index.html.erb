@@ -62,13 +62,19 @@ $(function(){
 
     
   $('#calculator-form').on('submit', function(e){
-
-    calcStats = $('#calculator-form').val();
+      e.preventDefault
       $.ajax({
-          url: "/beers",
+          url: "/rounds",
           data: {
-            query: calcStats
+            sex: this.$("input[name='name']").val()
+            lbs: this.$("input[name='lbs']").val(),
+            hours: this.$("input[name='hours']").val(),
+            abv: this.$("input[name='abv']").val(),
+            drinks: this.$("input[name='drinks']").val()
           },
+        success: function(data) {
+          var round = new Round(data);
+        }
       });
   });
 
