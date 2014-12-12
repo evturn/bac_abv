@@ -1,23 +1,24 @@
 class Round < ActiveRecord::Base
+  belongs_to :user
 
   def calculate()
-    sex    = self.sex
-    lbs    = self.lbs
-    hours  = self.hours
-    drinks = self.drinks
-    abv    = self.abv
+      sex    = self.sex
+      lbs    = self.lbs
+      hours  = self.hours
+      drinks = self.drinks
+      abv    = self.abv
 
-    rate = sex == "male" ? 0.73 : 0.66
+      rate = sex == "male" ? 0.73 : 0.66
 
-    bev_oz = drinks * 12
-    alc_oz = bev_oz * abv
+      bev_oz = drinks * 12
+      alc_oz = bev_oz * abv
 
-    step_1 = (alc_oz * 5.14)
-    step_2 = (lbs * rate)
-    step_3 = (step_1 / step_2)
-    step_4 = (0.015 * hours)
+      step_1 = (alc_oz * 5.14)
+      step_2 = (lbs * rate)
+      step_3 = (step_1 / step_2)
+      step_4 = (0.015 * hours)
 
-    self.bac   = (step_3 - step_4)
+      self.bac   = (step_3 - step_4)
 
   end
 
