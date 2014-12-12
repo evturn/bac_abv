@@ -29,6 +29,10 @@ body {
 	border-left: 1px solid #ccc;
 }
 
+#fb-login {
+	float: right;
+}
+
 #featured-beer {
 	margin-bottom: 20px;
 }
@@ -38,6 +42,10 @@ body {
 	width: 960px;
 	border-bottom: 1px solid black;
 	margin-bottom: 10px;
+}
+
+#status {
+	float: right;
 }
 
 #chart-gauge {
