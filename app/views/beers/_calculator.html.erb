@@ -1,6 +1,9 @@
 <form id="calculator-form" action="/rounds" enctype="text">
 	<h2>CALCULATOR</h2>
 		
+
+<!-- SEX INPUT -->
+
 		<div class="row">
 			<div class="two columns">
 				<input type="radio" name="male">
@@ -11,6 +14,8 @@
 				<span class="label-body">FEMALE</span>
 			</div>
 		</div>	
+
+<!-- LBS AND HOURS INPUT -->
 
 		<div class="row">
 			<div class="two columns">	
@@ -23,6 +28,9 @@
 			</div>
 		</div>	
 
+
+<!-- DRINKS AND ABV INPUT -->
+
 		<div class="row">
 			<div class="two columns">
 				<label for="bev_oz">&numero; of DRINKS</label>
@@ -32,16 +40,39 @@
 				<label for="ABV">ALCOHOL %</label>
 				<input class="u-full-width" type="text" placeholder="0.05" name="abv">
 			</div>
-		</div>	
-			
+		</div>
+
+<!-- ADD DRINK INPUT -->
+
 		<div class="row">
 			<div class="two columns">
-				 <input class="u-full-width" type="submit" value="SUBMIT">
+				<input class="u-full-width" type="text" placeholder="3" name="drinks">
 			</div>
 			<div class="two columns">
-				<input class="u-full-width" type="reset" value="RESET">
+				<input class="u-full-width" type="text" placeholder="0.05" name="abv">
+			</div>
+		</div>
+
+<!-- ADD DRINK SUBMIT BUTTON-->
+
+		<div class="row">
+			<div class="five columns">
+				<input id="add-drink" class="four columns" type="submit" value="+ ADD DRINK">
+			</div>
+		</div>
+			
+<!-- FORM SUBMIT AND RESET BUTTONS -->
+
+		<div class="row">
+			<div class="two columns">
+				 <input class="two columns" type="submit" value="CHEERS">
+			</div>
+			<div class="two columns">
+				<input class="two columns" type="reset" value="START OVER">
 			</div>
 		</div>	
+
+<!-- BAC RESULT -->
 		
 		<div class="row">
 			<div id="bac-display" class="five columns">
