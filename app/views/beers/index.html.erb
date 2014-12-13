@@ -59,7 +59,7 @@ $(function(){
   });
 
     
-  $('#calculator-form').on('submit', function(e){
+  $('#calculator-form').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({
           url: "/rounds",
