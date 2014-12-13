@@ -11,7 +11,7 @@ class Round < ActiveRecord::Base
       rate = sex == "male" ? 0.73 : 0.66
 
       bev_oz = drinks * 12
-      alc_oz = bev_oz * abv
+      alc_oz = bev_oz * (abv * 0.01)
 
       step_1 = (alc_oz * 5.14)
       step_2 = (lbs * rate)

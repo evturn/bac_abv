@@ -12,7 +12,8 @@ var AddDrinkView = Backbone.View.extend({
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;
 	},
-	addDrink: function(){
+	addDrink: function(e){
+		e.preventDefault;
 		var addDrinkView = new AddDrinkView();
 		$('#add-drink-display').html(addDrinkView.render().$el);
 	}

@@ -5,7 +5,8 @@
 
      <script type="text/template" id="beer-results-template">
       <div class="six columns">
-        <img src="<%%= beer_label %>">
+        <img id="beer-label" src="<%%= beer_label %>">
+        <input id="select-abv" type="submit" value="ADD TO CALCULATOR">
         <ul>
           <li><%%= beer_name %></li>
           <li><%%= beer_style %></li>
