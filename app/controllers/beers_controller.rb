@@ -17,8 +17,11 @@ class BeersController < ApplicationController
     country     = featured['brewery']['country_name']
     @f_location = "#{city}, #{state} #{country}"
 
-    @top_beers  = trending['response']["micro"]["items"].map { |beer| beer['beer'] }
+    @top_beers = trending['response']["micro"]["items"].map { |item| 
+        item }
+        
 
+    
   end
 
   def search
