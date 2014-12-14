@@ -62,6 +62,18 @@ body {
 	margin-left: -0.5px;
 }
 
+#trending-title {
+	margin-left: -3px;
+}
+
+.featured-label {
+	margin-left: 40px;
+}
+
+#trending-list {
+	margin-left: -20px;
+}
+
 .chart-color1 {
   fill: yellow;
 }

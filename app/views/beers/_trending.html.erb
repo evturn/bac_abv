@@ -1,10 +1,18 @@
-<h2>TRENDING</h2>
-<%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
-  <ul>
-    <% @top_beers.map do|item|%>
-    
-   <li>
-   <a href="<%= item['brewery']['contact']['url'] %>"><%= item["beer"]["beer_name"] %></a>
-   </li>
-    <% end %>
-  </ul>
+<div class="row">
+	<div class="three columns" id="trending-title">
+		<h2>TRENDING</h2>
+		<%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
+  </div>
+
+  <div class="row">
+  	<div class="three columns" id="trending-list">
+  		<ul>
+    		<% @top_beers.map do|item|%>
+   			<li>
+   				<a class="four columns button button-primary" href="<%= item['brewery']['contact']['url'] %>"><%= item["beer"]["beer_name"].upcase %></a>
+   			</li>
+    		<% end %>
+  		</ul>
+		</div>
+ 	</div>
+</div>
