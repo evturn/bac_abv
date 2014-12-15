@@ -1,77 +1,79 @@
-<form id="calculator-form" action="/rounds" enctype="text">
-	<h2>CALCULATOR</h2>
-		
-
-<!-- SEX INPUT -->
-
-		<div class="row">
-			<div class="two columns">
-				<input type="radio" name="male">
-				<span class="label-body">MALE</span>
-			</div>	
-			<div class="two columns">
-				<input class="u-full-width" type="radio" name="female">
-				<span class="label-body">FEMALE</span>
-			</div>
-		</div>	
-
-<!-- LBS AND HOURS INPUT -->
-
-		<div class="row">
-			<div class="two columns">	
-			<label for="lbs">BODY WEIGHT</label>	
-				<input class="u-full-width" type="password" placeholder="Lbs" name="lbs">
-			</div>
-			<div class="two columns">
-				<label for="hours">HOURS</label>
-				<input class="u-full-width" type="text" placeholder="2" name="hours">
-			</div>
-		</div>	
-
-
-<!-- DRINKS AND ABV INPUT -->
-
-		<div class="row">
-			<div class="two columns">
-				<label for="bev_oz">&numero; of DRINKS</label>
-				<input class="u-full-width" type="text" placeholder="3" name="drinks">
-			</div>
-			<div class="two columns">
-				<label for="ABV">ALCOHOL %</label>
-				<input class="u-full-width" type="text" placeholder="5" name="abv">
-			</div>
-		</div>
-
-<!-- ADD DRINK INPUT -->
-
-		<div id="add-drink-display" class="row">
-		</div>
-
-<!-- ADD DRINK SUBMIT BUTTON-->
-
-		<div class="row">
-			<div class="five columns">
-				<input id="add-drink-button" class="four columns" type="submit" value="+ ADD DRINK">
-			</div>
-		</div>
+<div class="row">
+	<form id="calculator-form" action="/rounds" enctype="text">
+		<h2>CALCULATOR</h2>
 			
-<!-- FORM SUBMIT AND RESET BUTTONS -->
 
-		<div class="row">
-			<div class="two columns">
-				 <input id="bac-submit" class="two columns" type="submit" value="CHEERS">
-			</div>
-			<div class="two columns">
-				<input class="two columns" type="reset" value="START OVER">
-			</div>
-		</div>	
+	<!-- SEX INPUT -->
 
-<!-- BAC RESULT -->
-		
-		<div class="row">
-			<div id="bac-display" class="five columns">
-				&zwnj;
-			</div>
-		</div>		
+			<div class="row">
+				<div class="two columns">
+					<input type="radio" name="male">
+					<span class="label-body">MALE</span>
+				</div>	
+				<div class="two columns">
+					<input class="u-full-width" type="radio" name="female">
+					<span class="label-body">FEMALE</span>
+				</div>
+			</div>	
 
-</form>
+	<!-- LBS AND HOURS INPUT -->
+
+			<div class="row">
+				<div class="two columns">	
+				<label for="lbs">BODY WEIGHT</label>	
+					<input class="u-full-width" type="password" placeholder="Lbs" name="lbs">
+				</div>
+				<div class="two columns">
+					<label for="hours">HOURS</label>
+					<input class="u-full-width" type="text" placeholder="2" name="hours">
+				</div>
+			</div>	
+
+
+	<!-- DRINKS AND ABV INPUT -->
+
+			<div class="row">
+				<div class="two columns">
+					<label for="bev_oz">&numero; of DRINKS</label>
+					<input class="u-full-width" type="text" placeholder="3" name="drinks">
+				</div>
+				<div class="two columns">
+					<label for="ABV">ALCOHOL %</label>
+					<input class="u-full-width" type="text" placeholder="5" name="abv">
+				</div>
+			</div>
+
+	<!-- ADD DRINK INPUT -->
+
+			<div id="add-drink-display" class="row">
+			</div>
+
+	<!-- ADD DRINK SUBMIT BUTTON-->
+
+			<div class="row">
+				<div class="five columns">
+					<input id="add-drink-button" class="four columns" type="submit" value="+ ADD DRINK">
+				</div>
+			</div>
+				
+	<!-- FORM SUBMIT AND RESET BUTTONS -->
+
+			<div class="row">
+				<div class="two columns">
+					 <input id="bac-submit" class="two columns" type="submit" value="CHEERS">
+				</div>
+				<div class="two columns">
+					<input class="two columns" type="reset" value="START OVER">
+				</div>
+			</div>	
+
+	<!-- BAC RESULT -->
+			
+			<div class="row">
+				<div id="bac-display" class="five columns">
+					&zwnj;
+				</div>
+			</div>		
+
+	</form>
+</div>

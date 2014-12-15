@@ -9,7 +9,7 @@
   		<ul>
     		<% @trending.map do|item|%>
    			<li>
-   				<a class="four columns button button-primary" href="<%= item['brewery']['contact']['url'] %>"><%= item["beer"]["beer_name"].upcase %></a>
+   				<a class="four columns button" href="<%= item['brewery']['contact']['url'] %>"><%= item["beer"]["beer_name"].upcase %></a>
    			</li>
     		<% end %>
   		</ul>
