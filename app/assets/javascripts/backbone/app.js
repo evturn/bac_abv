@@ -11,3 +11,9 @@ featuredBeer.fetch({
 	}
 });
 
+trendingBeer.fetch({
+	success: function() {
+		trendingBeer.render();
+	}
+});
+

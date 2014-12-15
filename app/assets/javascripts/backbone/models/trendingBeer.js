@@ -13,10 +13,11 @@ var TrendingBeer = Backbone.Model.extend({
 			url: "",
 			city: "",
 			state: "",
-			country, ""
+			country: "",
 		}
 	},
+	url: '/trending',
 	render: function() {
-		var view = new TrendingBeerView({model: this});
+		var collection = new TrendingBeerList({model: this});
 	}
 });
