@@ -1,11 +1,14 @@
 console.log('we got featuredView');
 
-var FeaturedView = Backbone.View.extend({
-	template: _.template($("#featured-beer-template").html()),
+var FeaturedBeerView = Backbone.View.extend({
+	tagName: 'li',
+	className: 'featured-beer',
 	initialize: function() {
 		this.render();
 	},
-	render: function(){
-		this.$el.html(this.template(this.model.toJSON()));
+	template: _.template($("#featured-beer-template").html()),
+	render: function() {
+		this.$el.html(this.template(this.model.attributes));
 		return this;
+	}
 });

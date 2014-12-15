@@ -12,7 +12,7 @@ class BeersController < ApplicationController
     # @f_brewery   = featured['brewery']
     # @f_location  =  "#{city}, #{state} #{country}"
     
-    render :json => @featured.as_json
+    render :json => @featured.as_json, status: 200
 
  
    
