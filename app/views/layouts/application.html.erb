@@ -26,12 +26,12 @@
 
 <script type="text/template" id="featured-beer-template">
   <h2>FEATURED</h2>
-  <%= image_tag(<%%= @f_label %>, class: "featured-label") %>
+  <%= image_tag(<%%= label %>, class: "featured-label") %>
   <ul>
-    <li>BEER: <%%= beer_name %></li>
-    <li>ABV: <%%= beer_abv %></li>
-    <li>BREWERY: <%%= brewery_name %></li>
-    <li>FROM: <%%= @f_location %></li>
+    <li>BEER: <%%= name %></li>
+    <li>ABV: <%%= abv %></li>
+    <li>BREWERY: <%%= brewery %></li>
+    <li>FROM: <%%= city, state, country %></li>
   </ul>
 </script>
 
