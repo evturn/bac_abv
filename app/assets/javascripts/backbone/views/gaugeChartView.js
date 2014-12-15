@@ -1,12 +1,15 @@
 console.log('we got a meter');
 
-var Meter = Backbone.View.extend({
+var GaugeChartView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'chart-gauge',
 	initialize: function() {
 		this.render();
 	},
 	template: _.template($("#chart-gauge-template").html()),
+	render: function() {
+		this.$el.html(this.template(gaugeChart.html()))
+	},
 
 });
 
