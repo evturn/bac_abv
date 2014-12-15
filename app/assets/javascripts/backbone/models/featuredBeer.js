@@ -11,5 +11,8 @@ var FeaturedBeer = Backbone.Model.extend({
 	state: "brewery_state",
 	country: "country_name",
 	},
-	url: '/featured'
+	url: '/featured',
+	render: function() {
+		var view = new FeaturedBeerView({model: this});
+	}
 });
