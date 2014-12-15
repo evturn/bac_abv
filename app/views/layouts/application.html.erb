@@ -24,16 +24,27 @@
 
 
 
-   <script type="text/template" id="add-drink-template">
-    <div class="row">
-      <div class="two columns">
-        <input class="u-full-width" type="text" name="drinks">
-      </div>
-      <div class="two columns">
-        <input class="u-full-width" type="text" name="abv">
-      </div>
-    </div>
-  </script>
+<script type="text/template" id="featured-beer-template">
+  <h2>FEATURED</h2>
+  <%= image_tag(<%%= @f_label %>, class: "featured-label") %>
+  <ul>
+    <li>BEER: <%%= beer_name %></li>
+    <li>ABV: <%%= beer_abv %></li>
+    <li>BREWERY: <%%= brewery_name %></li>
+    <li>FROM: <%%= @f_location %></li>
+  </ul>
+</script>
+
+  //  <script type="text/template" id="add-drink-template">
+  //   <div class="row">
+  //     <div class="two columns">
+  //       <input class="u-full-width" type="text" name="drinks">
+  //     </div>
+  //     <div class="two columns">
+  //       <input class="u-full-width" type="text" name="abv">
+  //     </div>
+  //   </div>
+  // </script>
 
 
 
