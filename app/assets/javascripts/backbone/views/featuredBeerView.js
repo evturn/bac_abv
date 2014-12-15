@@ -14,4 +14,3 @@ var FeaturedBeerView = Backbone.View.extend({
 	}
 });
 
-// <%= image_tag(<%%= label %>, class: "featured-label") %>

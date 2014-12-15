@@ -1,12 +1,19 @@
 console.log('we got app');
 
 var featuredBeer = new FeaturedBeer();
-var chartGaugeView = new ChartGaugeView();
+var chartGauge = new ChartGauge();
 
-chartGaugeView.render();
+
 
 featuredBeer.fetch({
 	success: function() {
 		featuredBeer.render();
+	}
+});
+
+chartGauge.fetch({
+	success: function(data) {
+		console.log(data);
+		chartGauge.render();
 	}
 });

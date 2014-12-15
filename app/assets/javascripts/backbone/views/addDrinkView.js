@@ -1,20 +1,13 @@
-console.log('we got drinkView')
+console.log('we got beerView');
 
-var AddDrinkView = Backbone.View.extend({
-	template: _.template($("#add-drink-template").html()),
+var BeerView = Backbone.View.extend({
+	template: _.template($("#beer-results-template").html()),
 	initialize: function(){
     this.listenTo(this.model, 'change', this.render);
   },
-  events: { 
-  	"submit #add-drink-button" : "addDrink"
-  },
-  render: function(){
+	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;
-	},
-	addDrink: function(e){
-		e.preventDefault;
-		var addDrinkView = new AddDrinkView();
-		$('#add-drink-display').html(addDrinkView.render().$el);
 	}
 });
+

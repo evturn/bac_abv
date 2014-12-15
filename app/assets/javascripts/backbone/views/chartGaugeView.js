@@ -3,15 +3,13 @@ console.log('we got a chartGaugeView');
 var ChartGaugeView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'chart-gauge',
+	template: _.template($("#chart-gauge-template").html()),
 	initialize: function() {
 		this.render();
 	},
-	template: _.template($("#chart-gauge-template").html()),
 	render: function() {
-		var chartGauge = new ChartGauge();
-		this.$el.(this.template(this.model.toJSON()));
-		$('#chart-gauge').prepend(this.$el);
+		this.$el.html(this.template(this.model.toJSON()));
+		$('#chart-gauge').append(this.$el);
+		return this;
 	}
-	
-
 });

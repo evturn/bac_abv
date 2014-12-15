@@ -16,13 +16,12 @@ class RoundsController < ApplicationController
 
   def gauge
 
-    @chart_gauge = File.open("gauge.html.erb", "w+") { |file|  }
-    
-    respond_to do format
-      format.json { 
-        render json: @chart_gauge
+  @meter = File.open("meter.js", "a+")    
+    respond_to do |f|
+      f.html
+      f.json { render json: @meter }
     end
-
+    
   end
 
   private
