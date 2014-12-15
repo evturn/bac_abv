@@ -2,11 +2,18 @@ class BeersController < ApplicationController
 
   def index
 
-    trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}"
-    
+    trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}" 
     trending    = HTTParty.get( trend_url )
-    
     featured    = trending['response']["micro"]["items"].sample
+    @f_beer     = featured['beer']
+    @f_brewery  = featured['brewery']
+    render :json @f_beer.to_json
+    render :json @f_brewery.to_json
+
+    
+    
+  
+    
 
     @f_beer     = featured['beer']['beer_name']
     @f_label    = featured['beer']['beer_label']
