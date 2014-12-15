@@ -14,11 +14,6 @@ class RoundsController < ApplicationController
     render json: round
   end
 
-  def gauge
-
-    
-  end
-
   private
 
   def round_params
