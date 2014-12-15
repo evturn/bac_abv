@@ -9,7 +9,7 @@ var ChartGaugeView = Backbone.View.extend({
 	template: _.template($("#chart-gauge-template").html()),
 	render: function() {
 		var chartGauge = new ChartGauge();
-		this.$el.(this.template(chartGauge()));
+		this.$el.(this.template(this.model.toJSON()));
 		$('#chart-gauge').prepend(this.$el);
 	}
 	
