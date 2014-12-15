@@ -1,4 +1,4 @@
-console.log('we got a chartGaugeView');
+console.log('we got chartGaugeView');
 
 var ChartGaugeView = Backbone.View.extend({
 	tagName: 'div',
@@ -9,7 +9,7 @@ var ChartGaugeView = Backbone.View.extend({
 	},
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
-		$('#chart-gauge').append(this.$el);
+		$('#chart-gauge').prepend(this.$el);
 		return this;
-	}
+	},
 });
