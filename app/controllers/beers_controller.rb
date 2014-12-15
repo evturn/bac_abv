@@ -3,16 +3,32 @@ class BeersController < ApplicationController
   def index
 
     trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}" 
-    trending  = HTTParty.get( trend_url )
-    @featured = trending['response']["micro"]["items"].sample
+    @trending  = HTTParty.get( trend_url )
 
     respond_to do |f|
       f.html { @top_beers }
+    end
+
+    @top_beers = @trending['response']["micro"]["items"].map { |item| item }
+        
+  end
+
+  def featured
+
+    trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}" 
+    @trending  = HTTParty.get( trend_url )
+    @featured = @trending['response']["micro"]["items"].sample
+
+    respond_to do |f|
       f.json { render json: @featured }
     end
 
-    @top_beers = trending['response']["micro"]["items"].map { |item| item }
-        
+  end
+
+
+  def trending
+
+
   end
 
   def search
