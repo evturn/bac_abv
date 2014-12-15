@@ -2,14 +2,7 @@ class BeersController < ApplicationController
 
   def index
 
-    trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}" 
-    response  = HTTParty.get( trend_url )
 
-    respond_to do |f|
-      f.html { @top_beers }
-    end
-
-    @trending = response['response']["micro"]["items"].map { |item| item }
         
   end
 
@@ -27,6 +20,16 @@ class BeersController < ApplicationController
 
 
   def trending
+
+    trend_url = "http://api.untappd.com/v4/beer/trending?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}" 
+    response  = HTTParty.get( trend_url )
+
+    @trending = response['response']["micro"]["items"].map { |item| item }
+    respond_to do |f|
+      f.html { render json: @trending }
+    end
+
+
 
 
   end

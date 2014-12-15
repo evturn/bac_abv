@@ -36,6 +36,27 @@
   </ul>
 </script>
 
+<script type="text/template" id="trending-beer-template">
+  <div class="row twelve columns alpha">
+  
+  <div class="four columns" id="trending-title">
+    <h3>TRENDING</h3>
+    <%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
+  </div>
+
+  <div class="row">
+    <div class="fourteen columns" id="trending-list">
+        <% @trending.map do |item|%>
+          <input class="u-full-width" method="get" action="<%= item['brewery']['contact']['url'] %>" type="submit" value="<%= item["beer"]["beer_name"].upcase %>">
+        <% end %>
+    </div>
+  </div>
+</div>
+
+</script>
+
+
+
 <script type="text/template" id="add-drink-template">
   <div class="row">
     <div class="two columns">
