@@ -34,11 +34,29 @@ li {
 #featured-beer {
 	
 }
+.list-horizontal {
+   margin: 0;
+   list-style-type: none;
+}
+.list-horizontal li {
+   margin-right: 1em;
+   display: inline;
+}
+
+#main-header nav {
+   padding: 1em;
+}
+#main-list li a {
+   text-decoration: none;
+}
+#main-menu {
+   text-align: right;
+}
 
 
 .navbar {
 	height: 60px;
-	width: 960px;
+	
 	border-bottom: 1px solid black;
 }
 
