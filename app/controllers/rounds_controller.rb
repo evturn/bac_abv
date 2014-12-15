@@ -16,11 +16,6 @@ class RoundsController < ApplicationController
 
   def gauge
 
-  @meter = File.open("meter.js", "a+")    
-    respond_to do |f|
-      f.html
-      f.json { render json: @meter }
-    end
     
   end
 

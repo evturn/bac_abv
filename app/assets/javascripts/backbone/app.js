@@ -10,16 +10,3 @@ featuredBeer.fetch({
 	}
 });
 
-
-
-meterFetcher.fetch({
-	success: function() {
-		var value = _(meterFetcher.attributes).value();
-		return value;
-			var stringGauge = JSON.stringify(value);
-			return stringGauge;
-				var chartGauge = stringGauge.text();			
-			  chartGauge.render();
-	}
-});
-

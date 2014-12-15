@@ -19,7 +19,7 @@ class BeersController < ApplicationController
 
     query = params['query'].gsub(' ', '+')
     url = "https://api.untappd.com/v4/search/beer?client_id=#{ENV['UNTAPPD_ID']}&client_secret=#{ENV['UNTAPPD_SECRET']}&q=#{query}"
-    # response = HTTParty.get( url )
+    response = HTTParty.get( url )
     beer     = response['response']['beers']['items'].first['beer']
     render json: beer.to_json, status: 200
   end
