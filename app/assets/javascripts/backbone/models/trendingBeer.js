@@ -16,7 +16,6 @@ var TrendingBeer = Backbone.Model.extend({
 			country, ""
 		}
 	},
-	url: '/trending',
 	render: function() {
 		var view = new TrendingBeerView({model: this});
 	}
