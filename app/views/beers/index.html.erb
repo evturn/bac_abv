@@ -1,37 +1,31 @@
-
-  
-
+<div class="row">
+  <div id="calculator" class="five columns">
+    <%= render partial: "partials/calculator" %>
+<div class="row">
+  <div id="chart-gauge" class="chart-gauge five columns">
+    <%= render partial: "partials/meter" %>
+  </div>
+</div>
+  </div>
+  <div id="beer-search" class="six columns offset-by-one">
+    <%= render partial: "partials/search" %>
     <div class="row">
-      <div id="calculator" class="five columns">
-        <%= render partial: "partials/calculator" %>
-    <div class="row">
-      <div id="chart-gauge" class="chart-gauge five columns">
-        <%= render partial: "partials/meter" %>
+      <div id='found-beer'>
+        &zwnj;
       </div>
     </div>
-
+  </div> 
+  <div id="featured-beer" class="featured-beer three columns">
+    <div class="row">
+      <div id="trending-beer" class="three columns">
+      <%= render partial: "partials/trending" %>
       </div>
-      <div id="beer-search" class="six columns offset-by-one">
-        <%= render partial: "partials/search" %>
-        
-      <div class="row">
-        <div id='found-beer'>
-          &zwnj;
-        </div>
-      </div>
+   </div>  
 
-      </div>
-      <div id="featured-beer" class="featured-beer three columns">
-
-
-        <div class="row">
-          <div id="trending-beer" class="three columns">
-          <%= render partial: "partials/trending" %>
-          </div>
-       </div>  
-
-      </div>  
+  </div>  
 </div>
+
+
 
 
 <script>
