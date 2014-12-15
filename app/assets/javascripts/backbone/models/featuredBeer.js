@@ -3,13 +3,13 @@ console.log('we got featuredBeer');
 var FeaturedBeer = Backbone.Model.extend({
 	defaults: {
 		beer: {
-			name: "beer_name",
+			name: "",
 			beer_abv: "",
 			style: "",
 			label: "",
 		},
 		brewery: {
-			brewery: "",
+			name: "",
 			city: "",
 			state: "",
 			country: ""
