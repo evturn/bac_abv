@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get  '/beers'    => "beers#search"
   post '/rounds'   => "rounds#create"
   get  '/users'    => "users#login"
-  
+  get  '/gauge'    => 'rounds#gauge'
 
 end
