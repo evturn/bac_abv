@@ -10,19 +10,16 @@ featuredBeer.fetch({
 	}
 });
 
-function parseObject(data) {
-	var value = _(data.attributes).value();
-	return value;
-		var stringGauge = JSON.stringify(value);
-		return stringGauge;
-			var chartGauge = stringGauge.toJSON();			
-			return chartGauge();
-};
+
 
 meterFetcher.fetch({
-	success: function(data) {
-		parseObject(data);
-		this.render();
+	success: function() {
+		var value = _(meterFetcher.attributes).value();
+		return value;
+			var stringGauge = JSON.stringify(value);
+			return stringGauge;
+				var chartGauge = stringGauge.text();			
+			  chartGauge.render();
 	}
 });
 
