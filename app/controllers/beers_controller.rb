@@ -12,7 +12,10 @@ class BeersController < ApplicationController
     # @f_brewery   = featured['brewery']
     # @f_location  =  "#{city}, #{state} #{country}"
     
-    render :json => @featured.as_json, status: 200
+    respond_to do |f|
+      f.html { @top_beers }
+      f.json { render json: @featured }
+    end
 
  
    
@@ -26,8 +29,7 @@ class BeersController < ApplicationController
     # _country     = featured['brewery']['country_name']
     # @_f_location = "#{city}, #{state} #{country}"
 
-    @top_beers = trending['response']["micro"]["items"].map { |item| 
-        item }
+    @top_beers = trending['response']["micro"]["items"].map { |item| item }
         
 
     

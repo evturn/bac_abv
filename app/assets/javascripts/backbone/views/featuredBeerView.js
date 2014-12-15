@@ -1,14 +1,15 @@
-console.log('we got featuredView');
+console.log('we got featuredBeerView');
 
 var FeaturedBeerView = Backbone.View.extend({
-	tagName: 'li',
+	tagName: 'div',
 	className: 'featured-beer',
 	initialize: function() {
 		this.render();
 	},
 	template: _.template($("#featured-beer-template").html()),
 	render: function() {
-		this.$el.html(this.template(this.model.attributes));
+		this.$el.html(this.template(this.model.toJSON()));
+		$('#featured-beer').prepend(this.$el);
 		return this;
 	}
 });
