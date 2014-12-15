@@ -9,6 +9,7 @@ var FeaturedBeerView = Backbone.View.extend({
 	template: _.template($("#featured-beer-template").html()),
 	render: function() {
 		this.$el.html(this.template(featuredBeer.toJSON()));
+		$('#featured-beer').prepend(this.$el);
 		return this;
 	}
 });

@@ -41,12 +41,18 @@
   
   <div class="four columns" id="trending-title">
     <h3>TRENDING</h3>
-    <img src="bottles.png" class="featured-label">
+    <img src="assets/bottles.png" class="featured-label">
   </div>
 
+
+
   <div class="row">
-    <div class="fourteen columns" id="trending-list">
-      <%%=  beer.beer_name %>
+    <div class="trending-list" id="trending-list">
+      <ul>
+        <%% beer.each(function(beer) { %>
+          <li><%%= beer.get('beer_name') %></li>
+        <%% }) %>
+      </ul>
     </div>
   </div>
 </div>

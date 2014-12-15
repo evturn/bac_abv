@@ -10,7 +10,6 @@ var TrendingBeerView = Backbone.View.extend({
 	template: _.template($("#trending-beer-template").html()),
 	render: function() {
 		this.$el.html(this.template(trendingBeer.toJSON()));
-		$('#trending-beer').prepend(this.$el);
 		return this;
 	}
 });

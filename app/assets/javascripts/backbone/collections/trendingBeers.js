@@ -1,4 +1,4 @@
-console.log('we got trendingBeerList');
+console.log('we got trendingBeers');
 
 var TrendingBeerList = Backbone.Collection.extend({
 	model: TrendingBeer,
