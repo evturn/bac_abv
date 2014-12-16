@@ -1,11 +1,15 @@
 console.log('we got trendingBeersView');
 
 var TrendingBeersView = Backbone.View.extend({
-	tagName: 'div',
+	el: $('#trending-list'),
 	template: _.template($('#trending-beer-template').html()),
+	initialize: function() {
+		this.render;
+	},
 	render: function() {
-    this.$el.html(this.template({collection: trendingBeers})); 
-    $('#trending-beer').append(this.$el);
+    this.collection.forEach(function(trendingBeerModel){
+
+    });
     return this;
   },
 });
