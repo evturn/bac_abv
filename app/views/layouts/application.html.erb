@@ -22,9 +22,6 @@
       </div>
    </script>
 
-<script type="text/template" id="trending-beer-template">
-  <li><%%= name %></li>
-</script>
 
 <script type="text/template" id="featured-beer-template">
   <h3>FEATURED</h3>
@@ -38,6 +35,9 @@
   </ul>
 </script>
 
+<script type="text/template" id="trending-beer-template">
+  <li><a class="button" href="<%%= brewery.url %>"><%%= beer.beer_name %><a/></li>
+</script>
 
 
 <script type="text/template" id="add-drink-template">

@@ -6,7 +6,6 @@ var TrendingBeersView = Backbone.View.extend({
 		this.render();
 	},
 	render: function() {
-		debugger;
     this.collection.models.forEach(function(model){
     	var modelView = new TrendingBeerView({model: model});
       this.$el.append(modelView.render().$el);
