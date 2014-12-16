@@ -3,7 +3,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
-  
 }
 
 li {
@@ -23,6 +22,13 @@ li {
 #search-bar {
 	width: 100%;
 }
+.row h4 {
+	text-align: center;
+}
+
+.one-third .column .featured-beer h4 {
+	text-align: center;
+}
 
 #select-abv {
 	float: right;
@@ -32,8 +38,12 @@ li {
 	float: right;
 }
 
+radio {
+	position: center;
+}
+
 #featured-beer {
-	
+	text-align: center;
 }
 .list-horizontal {
   margin: 0;
@@ -57,11 +67,12 @@ li {
 
 .navbar {
 	height: 100px;
+	text-align: center;
 	border-bottom: 1px solid black;
 }
 
 #title {
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 #status {
@@ -88,8 +99,7 @@ li {
 
 }
 
-.featured-label {
-	margin-left: 50px;	
+.featured-label {	
 
 }
 #main-content {
@@ -118,11 +128,11 @@ li {
 }
 
 .cf:before,
-.cf:after {
+/*.cf:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
 .cf:after {
     clear: both;
-}
+}*/

@@ -1,6 +1,6 @@
 <!-- RUBY -->
 <%= render partial: "partials/navbar" %>
-<div class="row sixteen columns clearfix" id="main-content">
+<div class="row twelve columns clearfix" id="main-content">
 
 <div id="calculator" class="one-third column">
   <%= render partial: "partials/calculator" %>
@@ -22,18 +22,21 @@
 </div>
 
 <!-- BACKBONE -->
-<div id="featured-beer" class="one-third column featured-beer">    
+<div id="featured-beer" class="one-third column featured-beer clearfix"> 
+  <h4>FEATURED</h4>   
     <%= render partial: "featured_template" %>
+    &zwnj;
   <div class="row">
     <div id="trending-beer" class="twelve columns trending-beer">
       <div class="row twelve columns alpha">
-        <div class="four columns" id="trending-title">
-          <h3>TRENDING</h3>
+        <div class="twelve columns" id="trending-title">
+          <h4>TRENDING</h4>
             <%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
         </div>
         <div class="trending-list" id="trending-list">
           <ul>
             <%= render partial: "trending_template" %>
+            &zwnj;
           </ul>
         </div>
       </div>
