@@ -3,9 +3,12 @@ console.log('we got app');
 var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
-var calculators    = new Calculators();
+var calculators   = new Calculators();
+var beer          = new Beer();
 
 calculatorView = new CalculatorView({collection: calculators});
+
+
 
 
 $(function(){
@@ -35,6 +38,7 @@ $(function(){
         query: beerQuery
       },
       success: function(data) {
+        
         var beer = new Beer(data);
         var view = new BeerView({model: beer});
         $('#found-beer').html(view.render().$el);
