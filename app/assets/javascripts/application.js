@@ -19,7 +19,7 @@
 //= require_tree ./d3
 //= require underscore
 //= require backbone
-//= require_tree ./backform
+//= require backform
 //= require_tree ./backbone/models/
 //= require_tree ./backbone/collections/
 //= require_tree ./backbone/views/
