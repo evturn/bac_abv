@@ -1,0 +1,11 @@
+<script type="text/template" id="featured-beer-template">
+  <h3>FEATURED</h3>
+    <img class="featured-label"  src="<%%= beer.beer_label %>" ></a>
+  <ul>
+    <li>BEER: <%%= beer.beer_name %></li>
+    <li>ABV: <%%= beer.beer_abv %></li>
+    <li>STYLE: <%%= beer.beer_style %></li>
+    <li>BREWERY: <%%= brewery.brewery_name %></li>
+    <li>FROM: <%%= brewery['location']['brewery_city'], brewery['location']['brewery_state'], brewery.country_name %></li>
+  </ul>
+</script>

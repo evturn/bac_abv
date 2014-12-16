@@ -1,107 +1,50 @@
-
+<!-- RUBY -->
 <%= render partial: "partials/navbar" %>
-
 <div class="row sixteen columns clearfix">
-  
 
-      <div id="calculator" class="one-third column">
-        <%= render partial: "partials/calculator" %>
-          
-          <div class="row">
-            <div id="chart-gauge" class="tweleve columns chart-gauge">
-              <%= render partial: "partials/meter" %>
-            </div>
-          </div>
-      
-      </div>
-
-
-
-    <div id="beer-search" class="one-third column">
-      <%= render partial: "partials/search" %>
-      
+<!-- BACKBONE -->
+  <div id="calculator" class="one-third column">
+    <%= render partial: "partials/calculator" %>
       <div class="row">
-        <div id='found-beer'>
-          &zwnj;
+        <div id="chart-gauge" class="tweleve columns chart-gauge">
+          <%= render partial: "partials/meter" %>
         </div>
       </div>
-    
+  </div>
+
+<!-- RUBY -->
+  <div id="beer-search" class="one-third column">
+    <%= render partial: "partials/search" %>
+
+<!-- AJAX -->
+  <div class="row">
+    <div id='found-beer'>
+      <%= render partial: "found_beer" %>
+      &zwnj;
     </div>
+  </div>
 
-    <div id="featured-beer" class="one-third column featured-beer">
-      
+<!-- RUBY -->
+  </div>
 
-      <div class="row">
-        <div id="trending-beer" class="twelve columns trending-beer">
-          <div class="row twelve columns alpha">
-            <div class="four columns" id="trending-title">
-              <h3>TRENDING</h3>
-                <%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
-            </div>
-            <div class="trending-list" id="trending-list">
-              <ul></ul>
-            </div>
-          </div>
+<!-- BACKBONE -->
+  <div id="featured-beer" class="one-third column featured-beer">    
+    <%= render partial: "featured_template" %>
+  <div class="row">
+    <div id="trending-beer" class="twelve columns trending-beer">
+      <div class="row twelve columns alpha">
+        <div class="four columns" id="trending-title">
+          <h3>TRENDING</h3>
+            <%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
         </div>
-      </div>  
-    </div>  
+        <div class="trending-list" id="trending-list">
+          <ul>
+            <%= render partial: "trending_template" %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>  
 
 
-
-
-
-
-
-<script>
-  
-$(function(){
-
-
-  $('#beer-search').on('submit', function(e){
-    e.preventDefault();
-    beerQuery = $('#search-bar').val();
-    $.ajax({
-      url: "/beers",
-      data: {
-        query: beerQuery
-      },
-      success: function(data) {
-        
-        var beer = new Beer(data);
-        var view = new BeerView({model: beer});
-        $('#found-beer').html(view.render().$el);
-        $('#found-beer').addClass('found-beer clearfix');          
-
-      }
-    });
-  });
-
-    
-  $('#calculator-form').on('submit #bac-submit', function(e){
-      e.preventDefault();
-      $.ajax({
-          url: "/rounds",
-          method: 'POST',
-          data: { round: {
-              sex: $(this).find("input[name='name']").val(),
-              lbs: $(this).find("input[name='lbs']").val(),
-              hours: $(this).find("input[name='hours']").val(),
-              abv: $(this).find("input[name='abv']").val(),
-              drinks: $(this).find("input[name='drinks']").val()
-            },
-          },
-        success: function(data) {
-          console.log(data)
-          var round = new Round(data);
-          var roundView  = new RoundView({ model: round });
-          $('#bac-display').html(roundView.render().$el);
-
-        }
-      });
-  });
-
-
-
-});
-
-</script>

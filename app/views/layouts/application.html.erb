@@ -3,41 +3,14 @@
 <head>
   <title>BAC ABV</title>
 
-     <script type="text/template" id="beer-results-template">
-      <div class="six columns">
-        <img id="beer-label" src="<%%= beer_label %>">
-        <input id="select-abv" type="submit" value="ADD TO CALCULATOR">
-        <ul>
-          <li><%%= beer_name %></li>
-          <li><%%= beer_style %></li>
-          <li>ABV: <%%= beer_abv %>%</li>
-          <li><%%= beer_description %></li>
-        </ul>
-      </div>
-    </script>
+
 
    <script type="text/template" id="bac-template">
         <div class="five columns">
           <h2><%%= bac %>% &#8776; BAC</h2>
       </div>
-   </script>
+   </s
 
-
-<script type="text/template" id="featured-beer-template">
-  <h3>FEATURED</h3>
-  <img class="featured-label"  src="<%%= beer.beer_label %>" ></a>
-  <ul>
-    <li>BEER: <%%= beer.beer_name %></li>
-    <li>ABV: <%%= beer.beer_abv %></li>
-    <li>STYLE: <%%= beer.beer_style %></li>
-    <li>BREWERY: <%%= brewery.brewery_name %></li>
-    <li>FROM: <%%= brewery['location']['brewery_city'], brewery['location']['brewery_state'], brewery.country_name %></li>
-  </ul>
-</script>
-
-<script type="text/template" id="trending-beer-template">
-  <li><a class="button" href="<%%= brewery.url %>"><%%= beer.beer_name %><a/></li>
-</script>
 
 
 <script type="text/template" id="add-drink-template">
@@ -51,9 +24,6 @@
   </div>
 </script>
 
-<script type="text/template" id="chart-gauge-template">
- 
-</script>
 
 
 
@@ -62,15 +32,68 @@
 
   <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   
   <div class="container">
-  		<%= yield %>
+      <%= yield %>
   </div>
-	
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script>
+  
+$(function(){
+
+
+  $('#beer-search').on('submit', function(e){
+    e.preventDefault();
+    beerQuery = $('#search-bar').val();
+    $.ajax({
+      url: "/beers",
+      data: {
+        query: beerQuery
+      },
+      success: function(data) {
+        
+        var beer = new Beer(data);
+        var view = new BeerView({model: beer});
+        $('#found-beer').html(view.render().$el);
+        $('#found-beer').addClass('found-beer clearfix');          
+
+      }
+    });
+  });
+
+    
+  $('#calculator-form').on('submit #bac-submit', function(e){
+      e.preventDefault();
+      $.ajax({
+          url: "/rounds",
+          method: 'POST',
+          data: { round: {
+              sex: $(this).find("input[name='name']").val(),
+              lbs: $(this).find("input[name='lbs']").val(),
+              hours: $(this).find("input[name='hours']").val(),
+              abv: $(this).find("input[name='abv']").val(),
+              drinks: $(this).find("input[name='drinks']").val()
+            },
+          },
+        success: function(data) {
+          console.log(data)
+          var round = new Round(data);
+          var roundView  = new RoundView({ model: round });
+          $('#bac-display').html(roundView.render().$el);
+
+        }
+      });
+  });
+
+
+
+});
+
+</script>
   </body>
 </html>
