@@ -22,10 +22,14 @@ svg[Attributes Style] g {
 
 }
 
-#float-div {
-	margin-top: -20px;
+#floating-div {
+	margin-top: -30px;
 	text-align: center;
 	position: center;
+}
+
+.beer-description {
+	background-color: white;
 }
 
 #search-bar {
