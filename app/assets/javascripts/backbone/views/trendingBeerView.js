@@ -5,7 +5,7 @@ var TrendingBeerView = Backbone.View.extend({
 	className: 'trending-list',
 	model: TrendingBeer,
 	initialize: function(){
-		this.render();
+		this.render()
 	},
 	template: _.template($("#trending-beer-template").html()),
 	render: function() {

@@ -22,7 +22,9 @@
       </div>
    </script>
 
-
+<script type="text/template" id="trending-beer-template">
+  <li><%%= name %></li>
+</script>
 
 <script type="text/template" id="featured-beer-template">
   <h3>FEATURED</h3>
@@ -34,25 +36,6 @@
     <li>BREWERY: <%%= brewery.brewery_name %></li>
     <li>FROM: <%%= brewery['location']['brewery_city'], brewery['location']['brewery_state'], brewery.country_name %></li>
   </ul>
-</script>
-
-<script type="text/template" id="trending-beer-template">
-  <div class="row twelve columns alpha">
-  
-  <div class="four columns" id="trending-title">
-    <h3>TRENDING</h3>
-    <img src="assets/bottles.png" class="featured-label">
-  </div>
-
-  <div class="row">
-    <div class="trending-list" id="trending-list">
-      <ul>
-       <li><%%= beer.beer_name %></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 </script>
 
 

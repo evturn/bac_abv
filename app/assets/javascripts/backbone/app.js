@@ -1,7 +1,7 @@
 console.log('we got app');
 
-var featuredBeer = new FeaturedBeer();
-var trendingBeer = new TrendingBeer();
+var featuredBeer  = new FeaturedBeer();
+var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
 
 
@@ -15,7 +15,7 @@ $(function(){
 
 	trendingBeers.fetch({
 		success: function() {
-			var trendingBeersView = new TrendingBeersView({collection: this});
+			trendingBeersView = new TrendingBeersView({collection: trendingBeers});
 		}
 	});
 
