@@ -8,7 +8,8 @@ var TrendingBeersView = Backbone.View.extend({
 	},
 	render: function() {
     this.collection.forEach(function(trendingBeerModel){
-
+    	var modelView = new TrendingBeerView({model: model});
+      this.$el.append(modelView.render().$el);
     });
     return this;
   },

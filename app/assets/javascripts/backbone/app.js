@@ -3,7 +3,7 @@ console.log('we got app');
 var featuredBeer = new FeaturedBeer();
 var trendingBeer = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
-var meterFetcher = new ChartGauge();
+
 
 $(function(){
 
@@ -18,6 +18,7 @@ $(function(){
 			var trendingBeersView = new TrendingBeersView({collection: this});
 		}
 	});
+
 });
 
 

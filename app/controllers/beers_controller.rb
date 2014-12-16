@@ -29,9 +29,6 @@ class BeersController < ApplicationController
       f.html { render json: @trending }
     end
 
-
-
-
   end
 
   def search
