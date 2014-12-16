@@ -3,6 +3,7 @@ console.log('we got featuredBeerView');
 var FeaturedBeerView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'featured-beer',
+	collection: TrendingBeers,
 	initialize: function() {
 		this.render();
 	},

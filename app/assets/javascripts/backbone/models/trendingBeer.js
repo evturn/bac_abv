@@ -18,6 +18,6 @@ var TrendingBeer = Backbone.Model.extend({
 	},
 	url: '/trending',
 	render: function() {
-		var collection = new TrendingBeerList({model: this});
+		var collection = new TrendingBeers({models: trendingBeer});
 	}
 });

@@ -1,6 +1,10 @@
 console.log('we got trendingBeers');
 
-var TrendingBeerList = Backbone.Collection.extend({
+var TrendingBeers = Backbone.Collection.extend({
+	url: '/trending',
 	model: TrendingBeer,
-	url: '/trending'
+	render: function() {
+		var trendingBeersView = new TrendingBeersView();
+		trendingBeersView.set({collection: trendingBeers});
+	}
 });
