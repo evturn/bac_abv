@@ -9,15 +9,23 @@ li {
 	list-style-type: none;
 }
 
-.found-beer {
- 
 
 svg[Attributes Style] g {
 	position: center;
 }
 
+.found-beer {
+	text-align: center;
+}
+
 #found-beer img {
 
+}
+
+#float-div {
+	margin-top: -20px;
+	text-align: center;
+	position: center;
 }
 
 #search-bar {

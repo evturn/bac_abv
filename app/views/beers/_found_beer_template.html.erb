@@ -1,12 +1,21 @@
 <script type="text/template" id="found-beer-template">
-<div class="six columns">
-  <img id="beer-label" src="<%%= beer_label %>">
-  <input id="select-abv" type="submit" value="ADD TO CALCULATOR">
-  <ul>
-    <li><%%= beer_name %></li>
-    <li><%%= beer_style %></li>
-    <li>ABV: <%%= beer_abv %>%</li>
-    <li><%%= beer_description %></li>
-  </ul>
-</div>
+	<div id="floating-div" class="row twelve columns">
+		<div class="six columns alpha">
+		  <img id="beer-label" src="<%%= beer_label %>">
+		</div>
+		<div class="six columns omega">
+			<ul>
+			  <li><%%= beer_name %></li>
+			  <li>ABV: <%%= beer_abv %>%</li>
+			  <li><%%= beer_style %></li>
+			</ul>
+	  </div>
+	  <div class="row twelve columns">
+			<input id="select-abv" type="submit" value="ADD TO CALCULATOR"></li>
+    </div>
+		  <ul>
+			  <li>
+		    <li><%%= beer_description %></li>
+	    </ul>
+  </div>
 </script>

@@ -38,14 +38,15 @@ $(function(){
         query: beerQuery
       },
       success: function(data) {
+        
         var beer = new Beer(data);
         var view = new BeerView({model: beer});
         $('#found-beer').html(view.render().$el);
-        $('#found-beer').addClass('found-beer clearfix');
+        $('#found-beer').addClass('found-beer clearfix');          
+
       }
     });
   });
-
   $('#calculator').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({
