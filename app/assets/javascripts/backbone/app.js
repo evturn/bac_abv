@@ -40,7 +40,7 @@ $(function(){
       }
     });
   });
-  
+
   $('#calculator-form').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({
@@ -62,4 +62,14 @@ $(function(){
         }
       });
   });
+
+
+  $('#calculator-form').on('submit #add-drink-button', function(e){
+      e.preventDefault();
+      $.ajax({
+        url: "/calculator"
+      })
+          
+
+
 });
