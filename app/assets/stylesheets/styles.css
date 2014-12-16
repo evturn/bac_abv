@@ -31,6 +31,14 @@ svg[Attributes Style] g {
 .beer-description {
 	background-color: white;
 }
+#featured-name {
+	text-align: right;
+}
+
+#featured-desc {
+	text-align: left;
+}
+
 
 #search-bar {
 	width: 100%;

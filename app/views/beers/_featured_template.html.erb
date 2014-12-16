@@ -1,11 +1,22 @@
 <script type="text/template" id="featured-beer-template">
-     <h4>FEATURED</h4> 
-    <img class="featured-label"  src="<%%= beer.beer_label %>" ></a>
-  <ul>
-    <li>BEER: <%%= beer.beer_name %></li>
-    <li>ABV: <%%= beer.beer_abv %></li>
-    <li>STYLE: <%%= beer.beer_style %></li>
-    <li>BREWERY: <%%= brewery.brewery_name %></li>
-    <li>FROM: <%%= brewery['location']['brewery_city'], brewery['location']['brewery_state'], brewery.country_name %></li>
-  </ul>
+  <h4>FEATURED</h4> 
+		<div class="row twelve columns">
+			<ul>
+			  <li>
+			  	<h5><%%= beer.beer_name %></h5>
+			  </li>
+		  </ul>
+		</div>
+ 	</div>
+  <div class="row">
+	  <div id="featured-desc" class="six columns alpha">
+	  	<img class="featured-label"  src="<%%= beer.beer_label %>" ></a>
+		</div>
+		<div id="featured-name"class="six columns omega">
+			<ul>
+			  <li><%%= beer.beer_abv %>% ABV</li>
+			  <li><%%= brewery.brewery_name %></li>
+				<li><%%= beer.beer_style %></li>
+			</ul>
+ 		</div>
 </script>
