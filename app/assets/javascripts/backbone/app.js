@@ -4,7 +4,10 @@ var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
 
+
 $(function(){
+
+
 	featuredBeer.fetch({
 		success: function() {
 			featuredBeer.render();
@@ -37,6 +40,7 @@ $(function(){
       }
     });
   });
+  
   $('#calculator-form').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({

@@ -16,7 +16,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3
-//= require_tree ./d3
 //= require underscore
 //= require backbone
 //= require backform
