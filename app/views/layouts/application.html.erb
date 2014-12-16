@@ -2,50 +2,18 @@
 <html>
 <head>
   <title>BAC ABV</title>
-
-
-
-   <script type="text/template" id="bac-template">
-        <div class="five columns">
-          <h2><%%= bac %>% &#8776; BAC</h2>
-      </div>
-   </s
-
-
-
-<script type="text/template" id="add-drink-template">
-  <div class="row">
-    <div class="two columns">
-      <input class="u-full-width" type="text" name="drinks">
-    </div>
-    <div class="two columns">
-      <input class="u-full-width" type="text" name="abv">
-    </div>
-  </div>
-</script>
-
-
-
-
-
-
-
   <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  
   <div class="container">
       <%= yield %>
   </div>
-  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script>
-  
-$(function(){
+<script>  
 
+$(function(){
 
   $('#beer-search').on('submit', function(e){
     e.preventDefault();
@@ -66,7 +34,6 @@ $(function(){
     });
   });
 
-    
   $('#calculator-form').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({
@@ -95,5 +62,5 @@ $(function(){
 });
 
 </script>
-  </body>
+</body>
 </html>
