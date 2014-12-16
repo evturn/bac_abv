@@ -3,6 +3,9 @@ console.log('we got app');
 var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
+var calculators    = new Calculators();
+
+calculatorView = new CalculatorView({collection: calculators});
 
 
 $(function(){
@@ -41,7 +44,7 @@ $(function(){
     });
   });
 
-  $('#calculator-form').on('submit #bac-submit', function(e){
+  $('#calculator').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({
           url: "/rounds",
@@ -62,14 +65,5 @@ $(function(){
         }
       });
   });
-
-
-  $('#calculator-form').on('submit #add-drink-button', function(e){
-      e.preventDefault();
-      $.ajax({
-        url: "/calculator"
-      })
-          
-
 
 });
