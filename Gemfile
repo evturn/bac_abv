@@ -49,3 +49,6 @@ gem 'httparty'
 
 # Asset pipeline help to deploy to heroku
 gem 'rails_12factor', group: :production
+
+# See https://devcenter.heroku.com/articles/ruby-versions for more information.
+ruby '2.0.0'
