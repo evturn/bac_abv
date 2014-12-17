@@ -46,3 +46,6 @@ gem 'pry'
 
 # Use HTTParty
 gem 'httparty'
+
+# Asset pipeline help to deploy to heroku
+gem 'rails_12factor', group: :production

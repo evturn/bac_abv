@@ -6,11 +6,7 @@ var trendingBeers = new TrendingBeers();
 var beer          = new Beer();
 
 
-
-
-
 $(function(){
-
 
 	featuredBeer.fetch({
 		success: function() {
@@ -27,19 +23,7 @@ $(function(){
 
 
 $(function(){
-  $('#calculator').on('click #add-drink-button'), function(e) {
-    e.preventDefault();
-    $.ajax({
-      url: "/rounds",
-      method: 'GET',
-      success: function(data) {
-          console.log(data)
-          var addDrinkView = new AddDrinkView(data);
-          $('#add-drink').html(addDrinkView.render().$el);
-      }
-    })
 
-  }
   $('#beer-search').on('submit', function(e){
     e.preventDefault();
     beerQuery = $('#search-bar').val();
@@ -60,25 +44,25 @@ $(function(){
   });
 
   $('#calculator').on('submit #bac-submit', function(e){
-      e.preventDefault();
-      $.ajax({
-          url: "/rounds",
-          method: 'POST',
-          data: { round: {
-              sex: $(this).find("input[name='name']").val(),
-              lbs: $(this).find("input[name='lbs']").val(),
-              hours: $(this).find("input[name='hours']").val(),
-              abv: $(this).find("input[name='abv']").val(),
-              drinks: $(this).find("input[name='drinks']").val()
-            }
-          },
-        success: function(data) {
-          console.log(data)
-          var round = new Round(data);
-          var roundView  = new RoundView({ model: round });
-          $('#bac-display').html(roundView.render().$el);
-        }
-      });
+    e.preventDefault();
+    $.ajax({
+        url: "/rounds",
+        method: 'POST',
+        data: { round: {
+            sex: $(this).find("input[name='name']").val(),
+            lbs: $(this).find("input[name='lbs']").val(),
+            hours: $(this).find("input[name='hours']").val(),
+            abv: $(this).find("input[name='abv']").val(),
+            drinks: $(this).find("input[name='drinks']").val()
+          }
+        },
+      success: function(data) {
+        console.log(data)
+        var round = new Round(data);
+        var roundView  = new RoundView({ model: round });
+        $('#bac-display').html(roundView.render().$el);
+      }
+    });
   });
 
 });
