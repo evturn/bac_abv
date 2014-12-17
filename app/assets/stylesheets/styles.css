@@ -95,7 +95,11 @@ li {
 }
 
 #title {
-	padding-top: 40px;
+	padding-top: 75px;
+}
+
+.squeeze {
+	line-height: 10%;
 }
 
 #status {
