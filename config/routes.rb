@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   get  '/featured'   =>  'beers#featured'
   get  '/trending'   =>  'beers#trending'
   post '/rounds'     =>  'rounds#create'
-  get  '/calculator' =>  'rounds#calculator'
 end

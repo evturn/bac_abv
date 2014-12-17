@@ -1,3 +1,3 @@
-console.log('we got calculator');
+// console.log('we got calculator');
 
-var Calculator = Backbone.Model.extend({});
+// var Calculator = Backbone.Model.extend({});

@@ -3,9 +3,7 @@ console.log('we got app');
 var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
-var calculators   = new Calculators();
 var beer          = new Beer();
-var round         = new Round();
 
 
 
@@ -47,6 +45,7 @@ $(function(){
       }
     });
   });
+
   $('#calculator').on('submit #bac-submit', function(e){
       e.preventDefault();
       $.ajax({
@@ -58,7 +57,7 @@ $(function(){
               hours: $(this).find("input[name='hours']").val(),
               abv: $(this).find("input[name='abv']").val(),
               drinks: $(this).find("input[name='drinks']").val()
-            },
+            }
           },
         success: function(data) {
           console.log(data)

@@ -1,6 +1,6 @@
-console.log('we got roundList')
+console.log('we got rounds')
 
-var RoundList = Backbone.Collection.extend({
+var Rounds = Backbone.Collection.extend({
 	model: Round,
 	url: "/rounds"
 });
