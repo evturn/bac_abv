@@ -1,24 +1,23 @@
 <%= render partial: "partials/navbar" %>
 
+<!-- COLUMN ONE -->
+<div class="row twelve columns" id="main-content">
+
 <div id="calculator" class="one-third column"> 
  <%= render partial: "rounds/calculator_template" %> 
 </div>
-
-
+<!-- COLUMN TWO -->
 <div id="beer-search" class="one-third column">
   <%= render partial: "partials/search" %>
-
-<div class="row">
-  <div id='found-beer'>  
-    
-    &zwnj;
+  <div class="row">
+    <div id='found-beer'>   
+      &zwnj;
+    </div>
   </div>
 </div>
 
-</div>
-
-
-<div id="featured-beer" class="one-third column featured-beer clearfix">   
+<!-- COLUMN THREE -->
+<div id="featured-beer" class="one-third column featured-beer">   
   <%= render partial: "featured_template" %>
   <div class="row">
     <div id="trending-beer" class="twelve columns trending-beer">
@@ -35,4 +34,5 @@
       </div>
     </div>
   </div>  
-</div>  
+</div> 
+</div> 

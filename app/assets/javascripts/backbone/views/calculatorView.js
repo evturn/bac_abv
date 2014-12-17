@@ -2,7 +2,7 @@ console.log('we got calculatorView');
 
 var CalculatorView = Backbone.View.extend({
   className: "calculator",
-  template: _.template($("#calculator-view-template").html()),
+  template: _.template($("#bac-view-template").html()),
   events: {
     "submit" : "createBAC"
   },
