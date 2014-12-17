@@ -2,14 +2,14 @@
   <div class="row twelve columns" id="featured-title">
   	<h4>FEATURED</h4> 
 	<div>
-	<div class="row twelve columns">
+	<div class="row twelve columns" id="featured-name">
 		<h5><%%= beer.beer_name %></h5>
 	</div>
   <div class="row twelve columns">
-	  <div class="six columns alpha" id="featured-img">
+	  <div class="four columns alpha offset-by-two" id="featured-img">
 	  	<a><img class="featured-label" src="<%%= beer.beer_label %>" ></a>
 		</div>
-		<div class="six columns omega" id="featured-name">
+		<div class="four columns omega" id="featured-info">
 			<ul>
 			  <li><%%= beer.beer_abv %>% ABV</li>
 			  <li><%%= brewery.brewery_name %></li>

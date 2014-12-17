@@ -24,6 +24,11 @@ li {
 }
 
 #featured-name {
+	padding-top: 15px;
+	border: 1px solid lightgrey;
+}
+
+#featured-spec {
 	text-align: right;
 }
 
