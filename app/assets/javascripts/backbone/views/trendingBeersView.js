@@ -1,7 +1,7 @@
 console.log('we got trendingBeersView');
 
 var TrendingBeersView = Backbone.View.extend({
-	el: '#trending-list ul',
+	el: '#trending-list',
 	initialize: function() {
 		this.render();
 	},

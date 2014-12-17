@@ -1,5 +1,5 @@
 console.log('we got app');
-// BACKBONE
+
 var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
@@ -24,7 +24,7 @@ $(function(){
 	});
 });
 
-// AJAX
+
 
 $(function(){
   $('#beer-search').on('submit', function(e){
