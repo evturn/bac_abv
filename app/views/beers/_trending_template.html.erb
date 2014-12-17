@@ -1,5 +1,17 @@
-<script type="text/template" id="trending-beer-template">
-  <li>
-  	<a class="button" href="<%%= brewery.contact.url %>"><%%= beer.beer_name %><a/>
-  	</li>
-</script>
+<div class="row twelve columns trending-beer" id="trending-beer" >
+    <div class="twelve columns" id="trending-title">
+      <h4>TRENDING</h4>
+    </div>
+    <div class="row twelve columns" id="trending-img">
+        <%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
+    </div>
+    <div class="trending-list" id="trending-list">
+      <ul>
+				<script type="text/template" id="trending-beer-template">
+				  <li>
+				  	<a class="button" href="<%%= brewery.contact.url %>"><%%= beer.beer_name %><a/>
+				  </li>
+				</script>
+			</ul>
+		</div>
+</div>

@@ -1,22 +1,22 @@
-<script type="text/template" id="featured-beer-template">
-  <h4>FEATURED</h4> 
+<div class="row twelve columns" id="featured-beer">
+	<script type="text/template" id="featured-beer-template">
+	  <div class="row twelve columns" id="featured-title">
+	  	<h4>FEATURED</h4> 
+		<div>
 		<div class="row twelve columns">
-			<ul>
-			  <li>
-			  	<h5><%%= beer.beer_name %></h5>
-			  </li>
-		  </ul>
+			<h5><%%= beer.beer_name %></h5>
 		</div>
- 	</div>
-  <div class="row">
-	  <div id="featured-desc" class="six columns alpha">
-	  	<img class="featured-label"  src="<%%= beer.beer_label %>" ></a>
-		</div>
-		<div id="featured-name"class="six columns omega">
-			<ul>
-			  <li><%%= beer.beer_abv %>% ABV</li>
-			  <li><%%= brewery.brewery_name %></li>
-				<li><%%= beer.beer_style %></li>
-			</ul>
- 		</div>
-</script>
+	  <div class="row twelve columns">
+		  <div class="six columns alpha" id="featured-img">
+		  	<a><img class="featured-label" src="<%%= beer.beer_label %>" ></a>
+			</div>
+			<div class="six columns omega" id="featured-name">
+				<ul>
+				  <li><%%= beer.beer_abv %>% ABV</li>
+				  <li><%%= brewery.brewery_name %></li>
+					<li><%%= beer.beer_style %></li>
+				</ul>
+	 		</div>
+	 	</div>
+	</script>
+</div>

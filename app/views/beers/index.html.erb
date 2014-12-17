@@ -1,38 +1,23 @@
-<%= render partial: "partials/navbar" %>
+  
+<!-- NAVBAR --> 
+<%= render partial: "navbar" %>
 
-<!-- COLUMN ONE -->
+<!-- WRAPPER -->
 <div class="row twelve columns" id="main-content">
+<!-- COLUMN ONE -->
 
-<div id="calculator" class="one-third column"> 
- <%= render partial: "rounds/calculator_template" %> 
-</div>
+  <div class="one-third column" id="calculator" > 
+     <%= render partial: "rounds/calculator_template" %> 
+   </div>
+
 <!-- COLUMN TWO -->
-<div id="beer-search" class="one-third column">
-  <%= render partial: "partials/search" %>
-  <div class="row">
-    <div id='found-beer'>   
-      &zwnj;
-    </div>
+  <div class="one-third column" id="beer-search">
+     <%= render partial: "search" %>
   </div>
-</div>
 
 <!-- COLUMN THREE -->
-<div id="featured-beer" class="one-third column featured-beer">   
-  <%= render partial: "featured_template" %>
-  <div class="row">
-    <div id="trending-beer" class="twelve columns trending-beer">
-      <div class="row twelve columns alpha">
-        <div class="twelve columns" id="trending-title">
-          <h4>TRENDING</h4>
-            <%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
-        </div>
-        <div class="trending-list" id="trending-list">
-          <ul>
-           <%= render partial: "trending_template" %>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>  
-</div> 
+  <div class="one-third column" id="column-3">   
+    <%= render partial: "featured_template" %>
+    <%= render partial: "trending_template" %>
+  </div>
 </div> 
