@@ -6,17 +6,17 @@ var RoundView = Backbone.View.extend({
 	initialize: function() {
 		this.listenTo(this.model, 'change', this.render);
 	},
-	events: {
-		"click #add-drink-button": "addDrink" 
-	},
+	// events: {
+	// 	"click #add-drink-button": "addDrink" 
+	// },
 	url: '/rounds',
 	render: function() {
 		this.$el.html(this.bacTemplate(this.model.toJSON()));
 		return this;
 	}
-	addDrink: function() {
-		this.$el.html(this.addDrinkTemplate);
-		$('#add-drink').append(this.$el);
-		return this;
-	}
+	// addDrink: function() {
+	// 	this.$el.html(this.addDrinkTemplate);
+	// 	$('#add-drink').append(this.$el);
+	// 	return this;
+	// }
 });
