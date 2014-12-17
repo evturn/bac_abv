@@ -1,28 +1,25 @@
-<!-- RUBY -->
 <%= render partial: "partials/navbar" %>
-<div class="row twelve columns clearfix" id="main-content">
 
-  <div id="calculator" class="one-third column">
-  
-  </div>
+<div id="calculator" class="one-third column"> 
+ <%= render partial: "rounds/calculator_template" %> 
+</div>
 
-<!-- RUBY -->
+
 <div id="beer-search" class="one-third column">
   <%= render partial: "partials/search" %>
 
-<!-- AJAX -->
 <div class="row">
   <div id='found-beer'>  
+    
     &zwnj;
   </div>
 </div>
 
-<!-- RUBY -->
 </div>
 
-<!-- BACKBONE -->
+
 <div id="featured-beer" class="one-third column featured-beer clearfix">   
-    
+  <%= render partial: "featured_template" %>
   <div class="row">
     <div id="trending-beer" class="twelve columns trending-beer">
       <div class="row twelve columns alpha">
@@ -32,7 +29,7 @@
         </div>
         <div class="trending-list" id="trending-list">
           <ul>
-          
+           <%= render partial: "trending_template" %>
           </ul>
         </div>
       </div>

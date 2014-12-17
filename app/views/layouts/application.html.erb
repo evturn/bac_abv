@@ -7,15 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <div class="container">
       <%= yield %>
   </div>
 
- 	<%= render partial: "beers/found_beer_template" %>
+	<%= render partial: "beers/found_beer_template" %>
 
-	<%= render partial: "featured_template" %>
 
-	<%= render partial: "trending_template" %>
+	
   
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>

@@ -1,6 +1,6 @@
 console.log('we got calculatorView');
 
-var NewTurtleView = Backbone.View.extend({
+var CalculatorView = Backbone.View.extend({
   className: "calculator",
   template: _.template($("#calculator-view-template").html()),
   events: {
@@ -22,27 +22,3 @@ var NewTurtleView = Backbone.View.extend({
     router.navigate('turtles', { trigger: true })
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-// var CalculatorView = Backbone.View.extend({
-// 	tagName: 'form',
-// 	className: 'add-drink-button',
-// 	template: _.template($('#add-drink-template').html()),
-// 	initialize: function() {
-// 		this.on('click', this.render());
-// 	},
-// 	render: function() {
-// 		this.$el.html(this.template());
-// 		$('#add-drink').prepend(this.$el);
-// 		return this;
-// 	}
-// });
