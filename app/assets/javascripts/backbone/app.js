@@ -4,7 +4,7 @@ var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
 var beer          = new Beer();
-var addDrinkView  = new AddDrinkView();
+
 
 
 
@@ -27,6 +27,19 @@ $(function(){
 
 
 $(function(){
+  $('#calculator').on('click #add-drink-button'), function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: "/rounds",
+      method: 'GET',
+      success: function(data) {
+          console.log(data)
+          var addDrinkView = new AddDrinkView(data);
+          $('#add-drink').html(addDrinkView.render().$el);
+      }
+    })
+
+  }
   $('#beer-search').on('submit', function(e){
     e.preventDefault();
     beerQuery = $('#search-bar').val();
