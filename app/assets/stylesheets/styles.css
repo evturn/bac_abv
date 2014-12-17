@@ -23,6 +23,10 @@ svg[Attributes Style] g {
 	background-color: white;
 }
 
+#featured-beer {
+	text-align: center;
+}
+
 #featured-name {
 	text-align: right;
 }
@@ -59,9 +63,6 @@ radio {
 	position: center;
 }
 
-#featured-beer {
-	text-align: center;
-}
 .list-horizontal {
   margin: 0;
   margin-top: -20px;
