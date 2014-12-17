@@ -43,6 +43,10 @@ li {
 	text-align: center;
 }
 
+#found-beer-name {
+	text-align: center;	
+}
+
 #floating-div {
 	margin-top: -30px;
 	padding: 15px;
