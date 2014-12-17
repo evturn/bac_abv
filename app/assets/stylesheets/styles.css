@@ -9,17 +9,12 @@ li {
 	list-style-type: none;
 }
 
-
 svg[Attributes Style] g {
 	position: center;
 }
 
 .found-beer {
 	text-align: center;
-}
-
-#found-beer img {
-
 }
 
 #floating-div {
@@ -38,7 +33,6 @@ svg[Attributes Style] g {
 #featured-desc {
 	text-align: left;
 }
-
 
 #search-bar {
 	width: 100%;
@@ -79,9 +73,11 @@ radio {
 #main-header nav {
   padding: 1em;
 }
+
 #main-list li a {
   text-decoration: none;
 }
+
 #main-menu {
   text-align: right;
 }
@@ -105,29 +101,9 @@ radio {
 	margin-bottom: -220px;	
 }
 
-#trending-beer {
-	
-}
-
-#trending-title {
-	
-
-}
-
-
-#trending-list {
-
-
-}
-
-.featured-label {	
-
-}
 #main-content {
 	padding-top: -100px;
 }
-
-	
 
 .trending-button {
 
