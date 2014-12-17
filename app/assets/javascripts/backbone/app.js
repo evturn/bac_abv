@@ -4,7 +4,7 @@ var featuredBeer  = new FeaturedBeer();
 var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
 var beer          = new Beer();
-
+var addDrinkView  = new AddDrinkView();
 
 
 

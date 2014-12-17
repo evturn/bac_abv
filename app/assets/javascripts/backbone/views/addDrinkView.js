@@ -1,15 +1,15 @@
 console.log('we got addDrinkView')
 
-var addDrinkView = Backbone.View.extend({
-	tagName: 'div',
-	className: 'add-drink-button',
+var AddDrinkView = Backbone.View.extend({
+	className: 'add-drink',
 	template: _.template($('#add-drink-template').html()),
 	initialize: function() {
-		this.on('click', this.render());
+		this.listenTo("click .add-drink", 'change', this.render);
 	},
+	url: '/rounds',
 	render: function() {
-		this.$el.html(this.template());
-		$('#add-drink').prepend(this.$el);
+		this.$el.html(this.template(this.model.toJSO()));
+		$('#add-drink').append(this.$el);
 		return this;
 	}
 });
