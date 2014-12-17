@@ -1,0 +1,20 @@
+<script type="text/template" id="featured-beer-template">
+  <div class="row twelve columns" id="featured-title">
+  	<h4>FEATURED</h4> 
+	<div>
+	<div class="row twelve columns">
+		<h5><%%= beer.beer_name %></h5>
+	</div>
+  <div class="row twelve columns">
+	  <div class="six columns alpha" id="featured-img">
+	  	<a><img class="featured-label" src="<%%= beer.beer_label %>" ></a>
+		</div>
+		<div class="six columns omega" id="featured-name">
+			<ul>
+			  <li><%%= beer.beer_abv %>% ABV</li>
+			  <li><%%= brewery.brewery_name %></li>
+				<li><%%= beer.beer_style %></li>
+			</ul>
+ 		</div>
+ 	</div>
+</script>
