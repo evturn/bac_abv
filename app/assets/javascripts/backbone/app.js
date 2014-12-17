@@ -5,6 +5,7 @@ var trendingBeer  = new TrendingBeer();
 var trendingBeers = new TrendingBeers();
 var calculators   = new Calculators();
 var beer          = new Beer();
+var round         = new Round();
 
 calculatorView = new CalculatorView({collection: calculators});
 
