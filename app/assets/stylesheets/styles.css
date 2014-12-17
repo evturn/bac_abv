@@ -9,11 +9,6 @@ li {
 	list-style-type: none;
 }
 
-#floating-div {
-	margin-top: -30px;
-	text-align: center;
-	position: center;
-}
 
 .beer-description {
 	background-color: white;
@@ -44,10 +39,18 @@ li {
 	text-align: center;
 }
 
-.found-beer {
+.found-beer {	
 	text-align: center;
 }
 
+#floating-div {
+	margin-top: -30px;
+	padding: 15px;
+	border: 1px solid lightgrey;
+	text-align: center;
+	position: center;
+	background-color: white;
+}
 .one-third .column .featured-beer h4 {
 	text-align: center;
 }
