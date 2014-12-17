@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BAC ABV</title>
+  <title>Delicious Deathbeds</title>
   <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,6 +13,10 @@
 
  	<%= render partial: "beers/found_beer_template" %>
 
+	<%= render partial: "featured_template" %>
+
+	<%= render partial: "trending_template" %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
