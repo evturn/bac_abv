@@ -14,6 +14,7 @@
 
 
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require d3
 //= require underscore

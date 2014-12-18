@@ -27,6 +27,12 @@ $(function(){
 
 $(function(){
 
+  
+  $('#beer-search').click(function(){
+         $("#beaker").effect( "shake", 
+          {times:4}, 1000 );
+      });
+
   $('#beer-search').on('submit', function(e){
     e.preventDefault();
     beerQuery = $('#search-bar').val();
@@ -69,13 +75,12 @@ $(function(){
     });
   });
 
-
-
-
-
   $('#beer-search').on('click', '#select-abv-button', function(){
     var abv = $('#selected-abv').text();
     $('input[name="abv"]').last().attr('value', abv);
   })
+
+
+
 
 });

@@ -54,3 +54,6 @@ ruby '2.1.2'
 
 # Gem unicorn for proc types like rake, console
 gem 'unicorn'
+
+# jQuery for UI
+# gem 'jquery-ui-rails'
