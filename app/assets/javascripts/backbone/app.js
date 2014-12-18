@@ -43,17 +43,18 @@ $(function(){
     });
   });
 
-  $('#calculator').on('submit #bac-submit', function(e){
+  $('#calculator').on('click', '#bac-submit', function(e){
     e.preventDefault();
+    $calculator = $('#calculator');
     $.ajax({
         url: "/rounds",
         method: 'POST',
         data: { round: {
-            sex: $(this).find("input[name='name']").val(),
-            lbs: $(this).find("input[name='lbs']").val(),
-            hours: $(this).find("input[name='hours']").val(),
-            abv: $(this).find("input[name='abv']").val(),
-            drinks: $(this).find("input[name='drinks']").val()
+            sex: $calculator.find("input[name='name']").val(),
+            lbs: $calculator.find("input[name='lbs']").val(),
+            hours: $calculator.find("input[name='hours']").val(),
+            abv: $calculator.find("input[name='abv']").val(),
+            drinks: $calculator.find("input[name='drinks']").val()
           }
         },
       success: function(data) {

@@ -1,7 +1,7 @@
-  <form id="calculator" action="/rounds">
-    <div class="row twelve columns">
+<div id="calculator">
+  <div class="row twelve columns">
 		<h4>CALCULATOR</h4>
-		</div>
+	</div>
 <!-- GENDER INPUT  -->
   <div class="row twelve columns">
 		<div class="six columns alpha">
@@ -25,7 +25,7 @@
 		</div>
 	</div>
 <!-- DRINKS AND ABV INPUT -->
-	 <div class="row twelve columns">
+	<div class="row twelve columns">
 		<div class="six columns alpha">
 			<label for="bev_oz">&numero; of DRINKS</label>
 			<input class="u-full-width" type="text" placeholder="3" name="drinks">
@@ -37,23 +37,21 @@
 	</div>
 <!-- ADD DRINK INPUT -->
 	
-	  <div class="row twelve columns add-drink" id="add-drink">
-			<div class="row twelve columns more-drinks">
-				<button class="u-full-width" id="add-drink-button" >+ ADD DRINK</button>
-			</div>
-		</div>
+  <div class="row twelve columns add-drink" id="add-drink"></div>
 		
 <!-- ADD DRINK SUBMIT BUTTON -->
+	<div class="row twelve columns more-drinks" id="more-drinks">
+		<button class="u-full-width" id="add-drink-button" >+ ADD DRINK</button>
+	</div>
 <!-- BAC RESULT -->
-		<div class="row twelve columns" id='bac-display'>
-		</div>
+	<div class="row twelve columns" id='bac-display'></div>
 <!-- FORM SUBMIT AND RESET BUTTONS -->
-	  <div class="row twelve columns">
-			<div class="six columns alpha">
-				<input class="u-full-width" id="bac-submit" type="submit" value="CHEERS">
-			</div>
-			<div class="six columns omega">
-				<input id="reset" type="reset" class="u-full-width" value="START OVER">
-			</div>
+  <div class="row twelve columns">
+		<div class="six columns alpha">
+			<input class="u-full-width" id="bac-submit" type="submit" value="CHEERS">
 		</div>
-	</form>
+		<div class="six columns omega">
+			<input id="reset" type="reset" class="u-full-width" value="START OVER">
+		</div>
+	</div>
+</div>
