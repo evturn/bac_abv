@@ -1,9 +1,12 @@
 console.log('we got app');
 
-var featuredBeer  = new FeaturedBeer();
-var trendingBeer  = new TrendingBeer();
-var trendingBeers = new TrendingBeers();
-var beer          = new Beer();
+var featuredBeer   = new FeaturedBeer();
+var trendingBeer   = new TrendingBeer();
+var trendingBeers  = new TrendingBeers();
+var beer           = new Beer();
+
+var roundModel = new Round();
+var startRoundView = new RoundView({model: roundModel});
 
 
 $(function(){
