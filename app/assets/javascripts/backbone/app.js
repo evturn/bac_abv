@@ -23,6 +23,8 @@ $(function(){
 	});
 });
 
+
+
 $(function(){
 
   $('#beer-search').on('submit', function(e){
@@ -39,7 +41,7 @@ $(function(){
         var view = new BeerView({model: beer});
         $('#found-beer').html(view.render().$el);
         $('#found-beer').addClass('found-beer clearfix');
-        $('#found-beer');
+
       }
     });
   });
@@ -66,5 +68,14 @@ $(function(){
       }
     });
   });
+
+
+
+
+
+  $('#beer-search').on('click', '#select-abv-button', function(){
+    var abv = $('#selected-abv').text();
+    $('input[name="abv"]').last().attr('value', abv);
+  })
 
 });

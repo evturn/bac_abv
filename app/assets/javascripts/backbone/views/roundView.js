@@ -17,7 +17,8 @@ var RoundView = Backbone.View.extend({
 	},
 	addDrink: function(event) {
 		event.preventDefault();
-		$('#add-drink').append(this.addDrinkTemplate);
+		$('#add-drink').append(this.addDrinkTemplate());
+		console.log(this.addDrinkTemplate())
 		return this;
 	}
 });
