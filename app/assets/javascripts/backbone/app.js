@@ -27,8 +27,13 @@ $(function(){
 
 $(function(){
 
+
+  $('#bac-submit').click(function() {
+    $('#chart-gauge').effect( "shake",
+      {times:4}, 1000 );
+  });
   
-  $('#beer-search').click(function(){
+  $('#beer-search').click(function() {
          $("#beaker").effect( "shake", 
           {times:4}, 1000 );
       });
