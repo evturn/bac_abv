@@ -3,12 +3,12 @@
   <div class="row six columns alpha" id="featured-title">
   	<h4>FEATURED</h4> 
   	<div class="row twelve columns" id="featured-name">
-			<%%= brewery.brewery_name %>
 			<h5><%%= beer.beer_name %></h5>
+			<%%= brewery.brewery_name %>
 		</div>
 	</div>
-  <div class="six columns omega" id="featured-img">
-  	<a><img class="featured-label" src="<%%= beer.beer_label %>" ></a>
+  <div class="six columns omega" id="featured-label">
+  	<a><img class="featured-img" src="<%%= beer.beer_label %>" ></a>
 		<div class="row twelve columns" id="featured-info">
 			<ul>
 			  <li><%%= beer.beer_abv %>% ABV</li>

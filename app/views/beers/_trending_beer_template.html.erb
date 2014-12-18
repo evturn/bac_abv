@@ -1,7 +1,5 @@
 <script type="text/template" id="trending-beer-template">
-	<ul>
-	  <li>
-	  	<a href="<%%= brewery.contact.url %>"><%%= beer.beer_name %><a/>
-	  </li>
-	</ul>
+		<div class="six columns alpha" id="trending-beer-label">
+	  	<a href="<%%= brewery.contact.url %>"><img class="trending-beer-img" src="<%%= beer.beer_label %>" ></a>
+	  </div>
 </script>

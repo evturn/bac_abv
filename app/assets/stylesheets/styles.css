@@ -26,9 +26,16 @@ li {
 	text-align: right;
 }
 
-#featured-img {
-	padding-top: 10px;
+#trending-label {
+	margin-top: -20px;
+	padding-left: 15px;
 }
+
+#trending-list {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
 
 #search-bar {
 	width: 100%;
