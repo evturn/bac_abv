@@ -39,7 +39,7 @@ $(function(){
         var view = new BeerView({model: beer});
         $('#found-beer').html(view.render().$el);
         $('#found-beer').addClass('found-beer clearfix');
-        $('#found-beer').bind('submit', selectAbv);
+        $('#found-beer');
       }
     });
   });

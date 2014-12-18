@@ -4,12 +4,12 @@ var BeerView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'found-beer',
 	template: _.template($("#found-beer-template").html()),
-	initialize: function() {
-		this.listenTo(this.model, 'change', selectAbv);
-	},
-	events: {
-		"submit #select-abv-button": "selectAbv"
-	},
+	// initialize: function() {
+	// 	this.listenTo(this.model, 'change', selectAbv);
+	// },
+	// events: {
+	// 	"submit #select-abv-button": "selectAbv"
+	// },
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
 		$('#found-beer').append(this.$el);
