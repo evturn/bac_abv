@@ -47,7 +47,7 @@ $(function(){
         query: beerQuery
       },
       success: function(data) {
-        debugger;
+        
         beer = new Beer(data);
         var view = new BeerView({model: beer});
         $('#found-beer').html(view.render().$el);
